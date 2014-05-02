@@ -23,6 +23,13 @@
             <url>http://opensource.org/licenses/BSD-2-Clause</url>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <id>stephan</id>
+            <name>Stephan Fuhrmann</name>
+            <email>stephan@tynne.de</email>
+        </developer>
+    </developers>    
 	<modules>
 		<module>saphir-hash-core</module>
 		<module>saphir-hash-jca</module>

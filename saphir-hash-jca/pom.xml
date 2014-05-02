@@ -19,6 +19,13 @@
         </license>
     </licenses>
     <packaging>jar</packaging>
+    <developers>
+        <developer>
+            <id>stephan</id>
+            <name>Stephan Fuhrmann</name>
+            <email>stephan@tynne.de</email>
+        </developer>
+    </developers>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
