@@ -34,8 +34,9 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.junit.Test;
 
 /**
- * Compares speed of SH-Lib and SUN providers.
+ * Compares speed of SH-Lib, Bouncy castle and SUN providers.
  *
+ * @see <a href="https://www.bouncycastle.org/">Bouncy Castle Project</a>
  * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public class SpeedTest {
@@ -50,16 +51,28 @@ public class SpeedTest {
         "SHA-384",
         "SHA-512"
     };
+    
+    private static class TestSpec {
+        long byteSize;
+        String name;
+
+        public TestSpec(long byteSize, String name) {
+            this.byteSize = byteSize;
+            this.name = name;
+        }
+    }
 
     /** Kilobyte. */
     private final static int K = 1024;
     
-    /** With what sizes to test. */
-    public final static int TEST_SIZES[] = new int[]{K, 10 * K, 100 * K, K * K, 100 * K * K};
+    private final static TestSpec TESTSPECS[] = new TestSpec[] {
+        new TestSpec(K, "1K"),
+        new TestSpec(10*K, "10K"),
+        new TestSpec(100*K, "100K"),
+        new TestSpec(K*K, "1M"),
+        new TestSpec(100*K*K, "100M"),
+    };
     
-    /** The human readable test size names. */
-    public final static String TEST_NAMES[] = new String[]{"1K", "10K", "100K", "1M", "100M"};
-
     @Test
     public void testSpeed() throws NoSuchAlgorithmException {
         JCAProvider sphlib = new JCAProvider();
@@ -72,14 +85,14 @@ public class SpeedTest {
 
         for (String algo : ALGORITHM_NAMES) {
 
-            for (int size : TEST_SIZES) {
+            for (TestSpec spec : TESTSPECS) {
                 boolean first = true;
                 for (Provider provider : providers) {
                     MessageDigest messageDigest = MessageDigest.getInstance(algo, provider);
                     // once without output to hopefully JIT compile
-                    test(algo, size, messageDigest, false, first);
+                    test(algo, spec, messageDigest, false, first);
                     // once with output
-                    test(algo, size, messageDigest, true, first);
+                    test(algo, spec, messageDigest, true, first);
                     
                     first = false;
                 }
@@ -91,17 +104,17 @@ public class SpeedTest {
 
     /** Speed test for one MD algo.
      * @param algo the algorithm name.
-     * @param size the byte size of the test data to digest.
+     * @param spec test description.
      * @param md the algorithm instance to use.
      * @param verbose whether to output the test result to  {@code System.out}.
      * @param first is this the first test for this algo? Used to format the output.
      */
-    private void test(String algo, int size, MessageDigest md, boolean verbose, boolean first) {
+    private void test(String algo, TestSpec spec, MessageDigest md, boolean verbose, boolean first) {
         byte oneK[] = new byte[K];
 
         long start = System.nanoTime();
 
-        for (int count = 0; count < size; count += oneK.length) {
+        for (int count = 0; count < spec.byteSize; count += oneK.length) {
             md.update(oneK);
         }
         md.digest();
@@ -109,11 +122,8 @@ public class SpeedTest {
         long end = System.nanoTime();
 
         if (verbose) {
-            int i = Arrays.binarySearch(TEST_SIZES, size);
-            String name = TEST_NAMES[i];
-            
             if (first) {
-                System.out.print(algo + "," + name + "," + md.getProvider().getName() + ","  + (end - start));
+                System.out.print(algo + "," + spec.name + "," + md.getProvider().getName() + ","  + (end - start));
             } else {
                 System.out.print(","+md.getProvider().getName() + ","  + (end - start));
             }
