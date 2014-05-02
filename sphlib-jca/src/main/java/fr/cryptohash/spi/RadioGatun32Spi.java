@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for RadioGatun32.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class RadioGatun32Spi extends GenericAdapterSpi {
     public RadioGatun32Spi() {

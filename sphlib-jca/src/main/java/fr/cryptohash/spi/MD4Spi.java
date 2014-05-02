@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for MD4.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class MD4Spi extends GenericAdapterSpi {
     public MD4Spi() {

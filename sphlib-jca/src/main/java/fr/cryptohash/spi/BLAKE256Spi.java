@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for BLAKE256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class BLAKE256Spi extends GenericAdapterSpi {
     public BLAKE256Spi() {

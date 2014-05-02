@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for BLAKE224.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class BLAKE224Spi extends GenericAdapterSpi {
     public BLAKE224Spi() {

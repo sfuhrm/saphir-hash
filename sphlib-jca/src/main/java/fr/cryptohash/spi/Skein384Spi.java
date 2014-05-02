@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Skein384.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Skein384Spi extends GenericAdapterSpi {
     public Skein384Spi() {

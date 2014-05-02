@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for SHAvite256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class SHAvite256Spi extends GenericAdapterSpi {
     public SHAvite256Spi() {

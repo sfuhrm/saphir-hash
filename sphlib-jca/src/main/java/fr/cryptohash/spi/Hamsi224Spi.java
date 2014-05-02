@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Hamsi224.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Hamsi224Spi extends GenericAdapterSpi {
     public Hamsi224Spi() {

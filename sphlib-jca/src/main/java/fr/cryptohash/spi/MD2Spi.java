@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for MD2.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class MD2Spi extends GenericAdapterSpi {
     public MD2Spi() {

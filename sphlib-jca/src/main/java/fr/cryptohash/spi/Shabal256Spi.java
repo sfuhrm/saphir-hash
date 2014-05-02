@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Shabal256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Shabal256Spi extends GenericAdapterSpi {
     public Shabal256Spi() {

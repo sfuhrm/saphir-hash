@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for MD5.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class MD5Spi extends GenericAdapterSpi {
     public MD5Spi() {

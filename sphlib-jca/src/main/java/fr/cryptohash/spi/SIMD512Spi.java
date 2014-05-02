@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for SIMD512.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class SIMD512Spi extends GenericAdapterSpi {
     public SIMD512Spi() {

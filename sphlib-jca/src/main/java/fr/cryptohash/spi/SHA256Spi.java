@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for SHA256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class SHA256Spi extends GenericAdapterSpi {
     public SHA256Spi() {

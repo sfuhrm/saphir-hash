@@ -12,7 +12,7 @@ import java.security.MessageDigestSpi;
 
 /**
  * Generic implementation adapter from JCA MD to Cryptohash MD.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
 

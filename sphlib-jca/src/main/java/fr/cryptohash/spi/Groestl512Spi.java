@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Groestl512.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Groestl512Spi extends GenericAdapterSpi {
     public Groestl512Spi() {

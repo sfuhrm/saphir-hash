@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for HAVAL160_5.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class HAVAL160_5Spi extends GenericAdapterSpi {
     public HAVAL160_5Spi() {

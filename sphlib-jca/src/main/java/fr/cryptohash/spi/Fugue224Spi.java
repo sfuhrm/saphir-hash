@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Fugue224.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Fugue224Spi extends GenericAdapterSpi {
     public Fugue224Spi() {

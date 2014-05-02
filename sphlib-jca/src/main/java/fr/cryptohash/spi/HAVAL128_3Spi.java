@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for HAVAL128_3.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class HAVAL128_3Spi extends GenericAdapterSpi {
     public HAVAL128_3Spi() {

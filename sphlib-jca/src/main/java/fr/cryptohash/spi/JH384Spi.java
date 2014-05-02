@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for JH384.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class JH384Spi extends GenericAdapterSpi {
     public JH384Spi() {

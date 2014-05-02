@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for SHA0.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class SHA0Spi extends GenericAdapterSpi {
     public SHA0Spi() {

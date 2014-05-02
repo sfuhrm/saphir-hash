@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Whirlpool.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class WhirlpoolSpi extends GenericAdapterSpi {
     public WhirlpoolSpi() {

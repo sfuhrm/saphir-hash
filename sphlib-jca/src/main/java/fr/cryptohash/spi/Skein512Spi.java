@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Skein512.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Skein512Spi extends GenericAdapterSpi {
     public Skein512Spi() {

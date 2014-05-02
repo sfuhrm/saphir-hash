@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for ECHO256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class ECHO256Spi extends GenericAdapterSpi {
     public ECHO256Spi() {

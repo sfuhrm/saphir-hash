@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for BMW384.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class BMW384Spi extends GenericAdapterSpi {
     public BMW384Spi() {

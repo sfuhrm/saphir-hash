@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for ECHO384.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class ECHO384Spi extends GenericAdapterSpi {
     public ECHO384Spi() {

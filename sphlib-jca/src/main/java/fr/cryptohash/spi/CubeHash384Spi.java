@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for CubeHash384.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class CubeHash384Spi extends GenericAdapterSpi {
     public CubeHash384Spi() {

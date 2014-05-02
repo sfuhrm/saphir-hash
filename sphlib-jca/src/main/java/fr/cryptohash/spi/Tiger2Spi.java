@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Tiger2.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Tiger2Spi extends GenericAdapterSpi {
     public Tiger2Spi() {

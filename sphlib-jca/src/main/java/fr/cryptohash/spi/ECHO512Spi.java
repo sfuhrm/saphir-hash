@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for ECHO512.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class ECHO512Spi extends GenericAdapterSpi {
     public ECHO512Spi() {

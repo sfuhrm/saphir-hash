@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Luffa512.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Luffa512Spi extends GenericAdapterSpi {
     public Luffa512Spi() {

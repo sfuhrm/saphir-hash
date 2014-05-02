@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for SIMD256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class SIMD256Spi extends GenericAdapterSpi {
     public SIMD256Spi() {

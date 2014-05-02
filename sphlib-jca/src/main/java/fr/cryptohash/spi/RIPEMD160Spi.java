@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for RIPEMD160.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class RIPEMD160Spi extends GenericAdapterSpi {
     public RIPEMD160Spi() {

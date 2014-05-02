@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Keccak256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Keccak256Spi extends GenericAdapterSpi {
     public Keccak256Spi() {

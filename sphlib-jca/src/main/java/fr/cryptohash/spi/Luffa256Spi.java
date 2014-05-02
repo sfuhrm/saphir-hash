@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Luffa256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Luffa256Spi extends GenericAdapterSpi {
     public Luffa256Spi() {

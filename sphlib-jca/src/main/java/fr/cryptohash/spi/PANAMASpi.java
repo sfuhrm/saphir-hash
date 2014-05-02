@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for PANAMA.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class PANAMASpi extends GenericAdapterSpi {
     public PANAMASpi() {

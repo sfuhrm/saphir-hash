@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Keccak224.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Keccak224Spi extends GenericAdapterSpi {
     public Keccak224Spi() {

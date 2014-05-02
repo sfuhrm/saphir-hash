@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for JH256.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class JH256Spi extends GenericAdapterSpi {
     public JH256Spi() {

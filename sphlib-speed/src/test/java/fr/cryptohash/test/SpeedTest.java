@@ -16,7 +16,7 @@ import org.junit.Test;
 /**
  * Compares speed of SH-Lib and SUN providers.
  *
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public class SpeedTest {
 

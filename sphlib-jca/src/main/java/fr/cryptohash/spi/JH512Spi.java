@@ -4,7 +4,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for JH512.
- * @author fury
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class JH512Spi extends GenericAdapterSpi {
     public JH512Spi() {
