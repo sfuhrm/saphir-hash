@@ -4,7 +4,26 @@
 	<groupId>de.tynne</groupId>
 	<artifactId>saphir-hash-core</artifactId>
 	<version>3.0.1-SNAPSHOT</version>
-	<name>Saphir Hash Core</name>
+    <name>Saphir Hash Core</name>
+    <description>Implementations of Message Digest algorithms independent of standard Java message digest infrastructure. 
+        Use saphir-hash-jca pom to add standard Java message digest infrastructure adapters.</description>
+    <url>https://github.com/sfuhrm/saphir-hash</url>
+    <scm>
+        <url>https://github.com/sfuhrm/saphir-hash</url>
+        <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
+    </scm>
+    <licenses>
+        <license>
+            <name>MIT-like, BSD-like open-source license</name>
+            <url>https://github.com/sfuhrm/saphir-hash/blob/master/saphir-hash-core/LICENSE.txt</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>The BSD 2-Clause License</name>
+            <url>http://opensource.org/licenses/BSD-2-Clause</url>
+        </license>
+    </licenses>
+    <packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

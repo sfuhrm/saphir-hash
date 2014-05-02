@@ -6,7 +6,23 @@
 	<packaging>pom</packaging>
 	<version>3.0-SNAPSHOT</version>
 	<name>Saphir Hash Parent</name>
-	<url>http://maven.apache.org</url>
+    <description>Parent maven project that builds the sub projects.</description>
+    <url>https://github.com/sfuhrm/saphir-hash</url>
+    <scm>
+        <url>https://github.com/sfuhrm/saphir-hash</url>
+        <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
+    </scm>
+    <licenses>
+        <license>
+            <name>MIT-like, BSD-like open-source license</name>
+            <url>https://github.com/sfuhrm/saphir-hash/blob/master/saphir-hash-core/LICENSE.txt</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>The BSD 2-Clause License</name>
+            <url>http://opensource.org/licenses/BSD-2-Clause</url>
+        </license>
+    </licenses>
 	<modules>
 		<module>saphir-hash-core</module>
 		<module>saphir-hash-jca</module>
