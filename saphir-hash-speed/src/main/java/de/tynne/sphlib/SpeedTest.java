@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann <stephan@tynne.de>
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
  * Compares speed of SH-Lib, Bouncy castle and SUN providers.
  *
  * @see <a href="https://www.bouncycastle.org/">Bouncy Castle Project</a>
- * @author Stephan Fuhrmann <stephan@tynne.de>
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 public class SpeedTest {
 
