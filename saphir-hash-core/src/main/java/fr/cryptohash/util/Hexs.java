@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann <stephan@tynne.de>
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@ package fr.cryptohash.util;
 
 /**
  * Hexadecimal utils.
- * @author Stephan Fuhrmann <stephan@tynne.de>
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 public final class Hexs {
     
