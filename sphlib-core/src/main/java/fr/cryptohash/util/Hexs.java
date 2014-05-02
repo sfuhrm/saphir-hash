@@ -27,7 +27,7 @@ package fr.cryptohash.util;
 
 /**
  * Hexadecimal utils.
- * @author Stephan Fuhrmann
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public final class Hexs {
     

@@ -33,7 +33,7 @@ import static org.junit.Assert.*;
 /**
  * Generic test utility class that gets extended from the digest test
  * classes.
- * @author Stephan Fuhrmann.
+ * @author Stephan Fuhrmann <stephan@tynne.de>
  */
 public class AbstractCryptoTest {
 
