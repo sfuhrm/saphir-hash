@@ -12,7 +12,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.1</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -43,25 +43,9 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.10</version>
+			<version>4.11</version>
 			<scope>test</scope>
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-	<repositories>
-  		<repository>
-			<id>tynne-snapshot</id>
-            <url>http://io.fritz.box:8081/archiva/repository/snapshots/</url>
-		</repository>
-	</repositories>	
-	<distributionManagement>
-		<repository>
-			<id>tynne</id>
-			<url>http://io.fritz.box:8081/archiva/repository/tynne/</url>
-		</repository>
-		<snapshotRepository>
-			<id>tynne-snapshot</id>
-			<url>http://io.fritz.box:8081/archiva/repository/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
 </project>
