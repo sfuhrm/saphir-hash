@@ -29,7 +29,6 @@ import fr.cryptohash.JCAProvider;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.Provider;
-import java.util.Arrays;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.junit.Test;
 
@@ -83,6 +82,8 @@ public class SpeedTest {
 
         Provider providers[] = new Provider[]{md5.getProvider(), sphlib, bouncy};
 
+        System.out.println("Algo,Size,SunProvider,SunDuration,SphProvider,SphDuration,BcProvider,SphDuration");
+        
         for (String algo : ALGORITHM_NAMES) {
 
             for (TestSpec spec : TESTSPECS) {
