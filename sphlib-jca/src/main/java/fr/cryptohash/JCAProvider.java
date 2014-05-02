@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
 
 /**
  * A JCA provider implementation for SPH-Lib.
- * The provider is called <code>SPH-Lib</code>.
+ * The provider is called <code>SPH</code> derived from the original 
+ * "Projet RNRT SAPHIR" by the french government.
  *
  * @see <a href="http://www.saphir2.com/sphlib/">Original sphlib 3.0 Website</a>
  * @see <a
@@ -18,8 +19,11 @@ import java.util.regex.Pattern;
  */
 public final class JCAProvider extends Provider {
 
+    /** The provider name as passed to JCA. */
+    public final static String PROVIDER_NAME = "SPH";
+    
     public JCAProvider() {
-        super("SPH-Lib", 3.0, "SPH-Library provider v3.0, implementing "
+        super(PROVIDER_NAME, 3.0, "SPH-Library provider v3.0, implementing "
                 + "multiple message digest algorithms.");
 
         Map<String,String> names = getNames();
