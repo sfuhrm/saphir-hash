@@ -77,7 +77,7 @@ public abstract class DigestEngine implements Digest {
 	 * implementation should use it to perform initialization tasks.
 	 * After this method is called, the implementation should be ready
 	 * to process data or meaningfully honour calls such as
-	 * {@link #getDigestLength}</code>.
+	 * {@link #getDigestLength}.
 	 */
 	protected abstract void doInit();
 
