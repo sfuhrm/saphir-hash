@@ -63,7 +63,9 @@ to whom technical questions may be addressed. Note that I do not claim
 authorship: all writing was done on behalf of the Projet RNRT SAPHIR.
 
 Refactorings, adjustments to the Maven build tool and the junit testing
-framework were done by Stephan Fuhrmann.
+framework were done by
+
+	Stephan Fuhrmann <stephan@tynne.de>
 
 Documentation
 =============
