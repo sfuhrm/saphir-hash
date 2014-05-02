@@ -127,7 +127,7 @@ abstract class MDHelper extends DigestEngine {
 	 * @param buf   the destination buffer
 	 * @param off   the destination offset
 	 */
-	private static final void encodeLEInt(int val, byte[] buf, int off)
+	private static void encodeLEInt(int val, byte[] buf, int off)
 	{
 		buf[off + 0] = (byte)val;
 		buf[off + 1] = (byte)(val >>> 8);
@@ -144,7 +144,7 @@ abstract class MDHelper extends DigestEngine {
 	 * @param buf   the destination buffer
 	 * @param off   the destination offset
 	 */
-	private static final void encodeBEInt(int val, byte[] buf, int off)
+	private static void encodeBEInt(int val, byte[] buf, int off)
 	{
 		buf[off + 0] = (byte)(val >>> 24);
 		buf[off + 1] = (byte)(val >>> 16);
