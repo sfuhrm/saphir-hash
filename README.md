@@ -3,10 +3,40 @@
 Saphir Hash is a Java library for calculating cryptographic message digests.
 The library is derived from the sphlib 3.0 code that can be found here:
 
-	http://www.saphir2.com/sphlib/
+[http://www.saphir2.com/sphlib/](http://www.saphir2.com/sphlib/ "sphlib 3.0 project page")
+	
 
 Compared to the standard SUN message digest algorithm this library
 contains many experimental hash algorithms.
+
+List of algorithms:
+
+* BLAKE224,256,384,512
+* BMW224,256,384,512
+* CubeHash224,256,384,512
+* ECHO224,256,384,512
+* Fugue224,256,384,512
+* Groestl224,256,384,512
+* Hamsi224,256,384,512
+* HAVAL128_3,128_4,128_5,160_3,160_4,160_5,192_3,192_4,192_5,224_3,224_4,224_5,256_3,256_4,256_5
+JH224,256,384,512
+* Keccak224,256,384,512
+* Luffa224,256,384,512
+* MD2
+* MD4
+* MD5
+* PANAMA
+* RadioGatun32,64
+* RIPEMD128,160
+* SHA0,1,224,256,384,512
+* Shabal192,224,256,384,512
+* SHAvite224,256,384,512
+* SIMD224,256,384,512
+* Skein224,256,384,512
+* Tiger2
+* Tiger
+* Whirlpool0,1
+* Whirlpool
 
 ## Documentation
 
@@ -47,11 +77,11 @@ We use the "Projet RNRT SAPHIR" expression to designate both SAPHIR and SAPHIR2.
 
 All the actual code has been written by:
 
-   Thomas Pornin <thomas.pornin at cryptolog.com> 
+   Thomas Pornin &lt;thomas.pornin at cryptolog.com&gt;
    
 The additions were written by:
 
-   Stephan Fuhrmann <stephan@tynne.de>
+   Stephan Fuhrmann &lt;stephan at tynne.de&gt;
 
 ## List of changes
 
