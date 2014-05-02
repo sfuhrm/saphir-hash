@@ -30,4 +30,4 @@
  * @author Stephan Fuhrmann
  */
 
-package fr.cryptohash.test.speed;
+package de.tynne.sphlib;

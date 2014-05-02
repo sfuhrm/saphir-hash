@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tynne</groupId>
-	<artifactId>sphlib-all</artifactId>
+	<artifactId>saphir-hash-all</artifactId>
 	<packaging>pom</packaging>
 	<version>3.0-SNAPSHOT</version>
-	<name>SPH Lib Parent</name>
+	<name>Saphir Hash Parent</name>
 	<url>http://maven.apache.org</url>
 	<modules>
-		<module>sphlib-core</module>
-		<module>sphlib-jca</module>
-		<module>sphlib-speed</module>
+		<module>saphir-hash-core</module>
+		<module>saphir-hash-jca</module>
+		<module>saphir-hash-speed</module>
 	</modules>
 </project>
