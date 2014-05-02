@@ -14,8 +14,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Tests whether Sun and SPH Lib results are the same.
- * @author fury
+ * Tests whether Sun and SPH results are the same.
+ * This only works for the algorithms that are existing in SPH and in SUN
+ * JCA providers also.
+ * @author Stephan Fuhrmann
  */
 public abstract class AbstractCompareToSunJCATest {
     

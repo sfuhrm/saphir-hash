@@ -12,8 +12,11 @@ import org.junit.Test;
 
 /**
  * Outputs the MessageDigest names supported on this platform.
- * Not really a test, sorry.
- * @author fury
+ * Not really a test.
+ * 
+ * TODO delete me in the future
+ * 
+ * @author Stephan Fuhrmann
  */
 public class SunNames {
     @Test

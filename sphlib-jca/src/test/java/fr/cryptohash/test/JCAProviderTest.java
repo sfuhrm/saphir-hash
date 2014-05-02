@@ -15,8 +15,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- *
- * @author fury
+ * Some basic tests to see whether the JCA provider is working.
+ * @author Stephan Fuhrmann
  */
 public class JCAProviderTest {
     @Test
