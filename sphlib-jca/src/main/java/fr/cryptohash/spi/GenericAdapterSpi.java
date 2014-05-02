@@ -44,6 +44,11 @@ class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
     /** Crypto hash digest algorithm. */
     private final Digest messageDigest;
     
+    /** 
+     * Constructor for a new adapter.
+     * @param messageDigest the cryptohash digest to adapt to.
+     * @throws NullPointerException if messageDigest is {@code null}.
+     */
     protected GenericAdapterSpi(Digest messageDigest) {
         if (messageDigest == null)
             throw new NullPointerException("messageDigest is null");
