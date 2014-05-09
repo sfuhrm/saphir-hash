@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.tynne</groupId>
     <artifactId>saphir-hash-speed</artifactId>
-    <version>3.0.1-SNAPSHOT</version>
+    <version>3.0.1</version>
     <name>Saphir Hash Speed Test</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,7 +61,7 @@
         <dependency>
             <groupId>de.tynne</groupId>
             <artifactId>saphir-hash-jca</artifactId>
-            <version>3.0.1-SNAPSHOT</version>
+            <version>3.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
