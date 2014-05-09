@@ -40,9 +40,9 @@ JH224,256,384,512
 
 ## Documentation
 
-The documentation can be viewed when doing
+The documentation can be viewed after executing
 
-	mvn javadoc:javadoc
+	mvn javadoc:aggregate
 
 ## Building
 
