@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann <stephan@tynne.de>
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,7 +27,7 @@
  * <p>The {@code fr.cryptohash.test} package contains some test code
  * which can be used to verify that the hash function implementations
  * run correctly.</p>
- * @author Stephan Fuhrmann <stephan@tynne.de>
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 
 package fr.cryptohash.test;

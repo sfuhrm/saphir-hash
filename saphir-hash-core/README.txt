@@ -71,7 +71,7 @@ Documentation
 =============
 
 The programming interface for the Java code can be
-generated using the command "mvn javadoc:javadoc".
+generated using the command "mvn javadoc:aggregate".
 
 Conformance
 ===========

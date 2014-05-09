@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann <stephan@tynne.de>
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for HAVAL256_3.
- * @author Stephan Fuhrmann <stephan@tynne.de>
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 public final class HAVAL256_3Spi extends GenericAdapterSpi {
     public HAVAL256_3Spi() {
