@@ -1,11 +1,12 @@
 <assembly>
 	<!-- see http://maven.apache.org/plugins/maven-assembly-plugin/assembly.html -->
-	<id>dist</id>
+	<id>full</id>
 	<formats>
 		<format>dir</format>
-		<format>tar.bz2</format>
+		<format>tar.gz</format>
+		<format>zip</format>
 	</formats>
-	<includeBaseDirectory>false</includeBaseDirectory>
+	<includeBaseDirectory>true</includeBaseDirectory>
 	<fileSets>
 		<fileSet>
 			<directory>saphir-hash-core/target</directory>
