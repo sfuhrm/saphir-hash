@@ -4,7 +4,7 @@
 	<groupId>de.tynne</groupId>
 	<artifactId>saphir-hash</artifactId>
 	<packaging>pom</packaging>
-	<version>3.0-SNAPSHOT</version>
+	<version>3.0.1</version>
 	<name>Saphir Hash Parent</name>
 	<url>http://maven.apache.org</url>
 	<modules>
