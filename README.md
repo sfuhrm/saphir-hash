@@ -4,7 +4,10 @@ Saphir Hash is a Java library for calculating cryptographic message digests.
 The library is derived from the sphlib 3.0 code that can be found here:
 
 [http://www.saphir2.com/sphlib/](http://www.saphir2.com/sphlib/ "sphlib 3.0 project page")
-	
+
+The repackaged, mavenized and JCA-enabled version 3.0.1 and later can be found here:
+
+[https://github.com/sfuhrm/saphir-hash](https://github.com/sfuhrm/saphir-hash "github saphir-hash project page")
 
 Compared to the standard SUN message digest algorithm this library
 contains many experimental hash algorithms.
