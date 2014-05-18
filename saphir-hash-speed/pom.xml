@@ -5,6 +5,19 @@
     <artifactId>saphir-hash-speed</artifactId>
     <version>3.0.1-SNAPSHOT</version>
     <name>Saphir Hash Speed Test</name>
+    <description>Speed benchmark code that is probably not interesting for anyone. Compares JDK message digest implementations with those of saphir-hash.</description>
+	<url>https://github.com/sfuhrm/saphir-hash</url>
+    <scm>
+        <url>https://github.com/sfuhrm/saphir-hash</url>
+        <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
+    </scm>
+    <licenses>
+        <license>
+            <name>The BSD 2-Clause License</name>
+            <url>http://opensource.org/licenses/BSD-2-Clause</url>
+        </license>
+    </licenses>
+    <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

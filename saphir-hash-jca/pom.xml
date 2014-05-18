@@ -5,6 +5,27 @@
 	<artifactId>saphir-hash-jca</artifactId>
 	<version>3.0.1-SNAPSHOT</version>
 	<name>Saphir Hash JCA Provider</name>
+    <description>Adapter classes from saphir-hash message digestsd to the standard Java message digest infrastructure.
+        Comes as a JCA crypto provider called 'SPH'.</description>
+	<url>https://github.com/sfuhrm/saphir-hash</url>
+    <scm>
+        <url>https://github.com/sfuhrm/saphir-hash</url>
+        <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
+    </scm>
+    <licenses>
+        <license>
+            <name>The BSD 2-Clause License</name>
+            <url>http://opensource.org/licenses/BSD-2-Clause</url>
+        </license>
+    </licenses>
+    <packaging>jar</packaging>
+    <developers>
+        <developer>
+            <id>stephan</id>
+            <name>Stephan Fuhrmann</name>
+            <email>stephan@tynne.de</email>
+        </developer>
+    </developers>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -37,6 +58,49 @@
 					</archive>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <configuration>
+                    <keyname>3EAD41F1</keyname>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 	<dependencies>
