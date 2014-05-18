@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tynne</groupId>
 	<artifactId>saphir-hash</artifactId>
 	<packaging>pom</packaging>
 	<version>3.0.1</version>
 	<name>Saphir Hash Parent</name>
-	<url>http://maven.apache.org</url>
+    <description>Parent maven project that builds the sub projects.</description>
+    <url>https://github.com/sfuhrm/saphir-hash</url>
+    <scm>
+        <url>https://github.com/sfuhrm/saphir-hash</url>
+        <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
+    </scm>
+    <licenses>
+        <license>
+            <name>MIT-like, BSD-like open-source license</name>
+            <url>https://github.com/sfuhrm/saphir-hash/blob/master/saphir-hash-core/LICENSE.txt</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>The BSD 2-Clause License</name>
+            <url>http://opensource.org/licenses/BSD-2-Clause</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>stephan</id>
+            <name>Stephan Fuhrmann</name>
+            <email>stephan@tynne.de</email>
+        </developer>
+    </developers>    
 	<modules>
 		<module>saphir-hash-core</module>
 		<module>saphir-hash-jca</module>
