@@ -94,4 +94,7 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+	<distributionManagement>
+            <downloadUrl></downloadUrl>
+	</distributionManagement>    
 </project>
