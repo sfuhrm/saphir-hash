@@ -43,7 +43,8 @@ JH224,256,384,512
 
 ## Documentation
 
-The documentation can be viewed after executing
+You can view the api docs online at http://tynne.de/saphir-hash/apidocs/
+The documentation can be generated with the command
 
 	mvn javadoc:aggregate
 
