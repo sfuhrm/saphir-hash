@@ -121,6 +121,19 @@ The JCA provider is contained in this dependency (version may change):
 </dependency>
 ```
 
+## Example usage
+
+The following short example directly instantiates
+fr.cryptohash.JCAProvider and calculates a digest over
+the String "test" in the platforms default character encoding:
+
+```java
+        MessageDigest mdSH = MessageDigest.getInstance("MD5", new JCAProvider());
+        mdSH.update("test".getBytes());
+        byte mdSHDigest[] = mdSH.digest();
+```
+
+
 ## License
 
 The original library is in a MIT-like license, the rest is in a BSD-like license.
