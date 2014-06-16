@@ -102,19 +102,19 @@ You can use the code using the Maven repository.
 
 The core classes without JCA support is in this dependency (version may change):
 
-<dependency>
-	<groupId>de.tynne</groupId>
-	<artifactId>saphir-hash-core</artifactId>
-	<version>3.0.1</version>
-</dependency>
+&lt;dependency&gt;
+	&lt;groupId&gt;de.tynne&lt;/groupId&gt;
+	&lt;artifactId&gt;saphir-hash-core&lt;/artifactId&gt;
+	&lt;version&gt;3.0.1&lt;/version&gt;
+&lt;/dependency&gt;
 
 The JCA provider is contained in this dependency (version may change):
 
-<dependency>
-	<groupId>de.tynne</groupId>
-	<artifactId>saphir-hash-jca</artifactId>
-	<version>3.0.1</version>
-</dependency>
+&lt;dependency&gt;
+	&lt;groupId&gt;de.tynne&lt;/groupId&gt;
+	&lt;artifactId&gt;saphir-hash-jca&lt;/artifactId&gt;
+	&lt;version&gt;3.0.1&lt;/version&gt;
+&lt;/dependency&gt;
 
 ## License
 
