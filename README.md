@@ -96,6 +96,26 @@ Stephan Fuhrmann:
 * Created JCA adapter to the digest algorithms
 * Created speed benchmark code to compare against SUN and BouncyCastle implementations
 
+## Maven dependencies
+
+You can use the code using the Maven repository.
+
+The core classes without JCA support is in this dependency (version may change):
+
+<dependency>
+	<groupId>de.tynne</groupId>
+	<artifactId>saphir-hash-core</artifactId>
+	<version>3.0.1</version>
+</dependency>
+
+The JCA provider is contained in this dependency (version may change):
+
+<dependency>
+	<groupId>de.tynne</groupId>
+	<artifactId>saphir-hash-jca</artifactId>
+	<version>3.0.1</version>
+</dependency>
+
 ## License
 
 The original library is in a MIT-like license, the rest is in a BSD-like license.
