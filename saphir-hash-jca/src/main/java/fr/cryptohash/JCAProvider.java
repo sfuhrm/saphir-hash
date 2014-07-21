@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * @see <a
  * href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/HowToImplAProvider.html">How
  * to Implement a Provider in the Java Cryptography Architecture</a>
- * @author fury
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 public final class JCAProvider extends Provider {
 

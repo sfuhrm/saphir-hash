@@ -4,7 +4,7 @@ import fr.cryptohash.test.AbstractCompareToSunJCATest;
 
 /**
  * Test for MD2.
- * @author fury
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 public class MD2JCATest extends AbstractCompareToSunJCATest {
     

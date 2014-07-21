@@ -4,7 +4,7 @@ import fr.cryptohash.test.AbstractCompareToSunJCATest;
 
 /**
  * Test for SHA256.
- * @author fury
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
 public class SHA256JCATest extends AbstractCompareToSunJCATest {
     
