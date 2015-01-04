@@ -43,7 +43,7 @@ JH224,256,384,512
 
 ## Documentation
 
-You can view the api docs online at http://tynne.de/saphir-hash/apidocs/
+You can view the api docs online at http://carterino.de/tynne/saphir-hash/apidocs/
 The documentation can be generated with the command
 
 	mvn javadoc:aggregate
@@ -66,7 +66,7 @@ project members are public and private organizations:
 
 * Cryptolog
 * ANSSI
-* École Normale Superieure
+* Ã‰cole Normale Superieure
 * France Telecom
 * Gemalto
 
