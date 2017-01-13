@@ -1,4 +1,4 @@
-# Saphir Hash
+# Saphir Hash ![Travis CI](https://travis-ci.org/sfuhrm/saphir-hash.svg?branch=master)
 
 Saphir Hash is a Java library for calculating cryptographic message digests.
 The library is derived from the sphlib 3.0 code that can be found here:
