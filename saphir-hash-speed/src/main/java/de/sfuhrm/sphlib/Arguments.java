@@ -25,8 +25,6 @@
  */
 package de.sfuhrm.sphlib;
 
-import java.util.ArrayList;
-import java.util.Objects;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
@@ -54,7 +52,8 @@ public class Arguments {
     }
 
     static Arguments parse(String args[]) {
-        Objects.requireNonNull(args);
+        if (args == null)
+            throw new NullPointerException();
         Arguments bean = new Arguments();
         
         CmdLineParser parser = new CmdLineParser(bean);
