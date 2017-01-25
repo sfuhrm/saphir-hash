@@ -27,7 +27,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Additions License (JCA, Unit Testing)
 
-Copyright (c) 2014, Stephan Fuhrmann <stephan@tynne.de>
+Copyright (c) 2014, Stephan Fuhrmann <s@sfuhrm.de>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

@@ -150,7 +150,7 @@
                                 <phase>package</phase>
                                 <configuration>
                                     <!-- remove the speed test from the javadoc -->
-                                    <excludePackageNames>de.tynne.sphlib</excludePackageNames>
+                                    <excludePackageNames>de.sfuhrm.sphlib</excludePackageNames>
                                 </configuration>
                             </execution>
                         </executions>
