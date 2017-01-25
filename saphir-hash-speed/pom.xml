@@ -1,80 +1,33 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.tynne</groupId>
+    <groupId>de.sfuhrm</groupId>
+    <parent>
+        <groupId>de.sfuhrm</groupId>
+        <artifactId>saphir-hash-parent</artifactId>
+        <version>3.0.3-SNAPSHOT</version>
+    </parent>
     <artifactId>saphir-hash-speed</artifactId>
-    <version>3.0.2-SNAPSHOT</version>
     <name>Saphir Hash Speed Test</name>
     <description>Speed benchmark code that is probably not interesting for anyone. Compares JDK message digest implementations with those of saphir-hash.</description>
-    <url>https://github.com/sfuhrm/saphir-hash</url>
-    <scm>
-        <url>https://github.com/sfuhrm/saphir-hash</url>
-        <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
-    </scm>
-    <licenses>
-        <license>
-            <name>The BSD 2-Clause License</name>
-            <url>http://opensource.org/licenses/BSD-2-Clause</url>
-        </license>
-    </licenses>
     <packaging>jar</packaging>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
                 <configuration>
-                    <archive>
-                        <addMavenDescriptor/>
-                        <compress/>
-                        <forced/>
-                        <index/>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>de.tynne.sphlib.SpeedTest</mainClass>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                            <addExtensions>true</addExtensions>
-                        </manifest>
-                    </archive>
+                    <skip>true</skip>
                 </configuration>
-            </plugin>                
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <descriptors>
-                        <descriptor>src/main/assembly/dist.xml</descriptor>
-                    </descriptors>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>    
     <dependencies>
         <dependency>
-            <groupId>de.tynne</groupId>
+            <groupId>de.sfuhrm</groupId>
             <artifactId>saphir-hash-jca</artifactId>
-            <version>3.0.1</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
@@ -84,17 +37,7 @@
         <dependency>
             <groupId>args4j</groupId>
             <artifactId>args4j</artifactId>
-            <version>2.0.26</version>
-        </dependency>        
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-            <optional>true</optional>
+            <version>2.33</version>
         </dependency>
     </dependencies>
-    <distributionManagement>
-        <downloadUrl></downloadUrl>
-    </distributionManagement>    
 </project>

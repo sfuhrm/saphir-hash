@@ -23,25 +23,11 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package de.tynne.sphlib;
-
 /**
- * Size unit multiplier.
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * <p>The package contains some speed test benchmarking code
+ * to test the JCA provider and compare to Bouncycastle and SUN
+ * implementations.</p>
+ * @author Stephan Fuhrmann
  */
-public enum Multiplier {
-    
-    K(1024),
-    M(1024*1024),
-    G(1024*1024*1024),
-    T(1024*1024*1024*1024);
-    
-    private final long multiplier;
-    private Multiplier(long multiplier) {
-        this.multiplier = multiplier;
-    }
-    
-    public long multiplier() {
-        return multiplier;
-    }
-}
+
+package de.sfuhrm.sphlib;

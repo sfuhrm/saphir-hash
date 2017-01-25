@@ -23,50 +23,25 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package de.tynne.sphlib;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+package de.sfuhrm.sphlib;
 
 /**
- * Number with multiplier, like "5 M".
+ * Size unit multiplier.
  * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
  */
-public class SizeWithMultiplier {
+public enum Multiplier {
     
-    private final long base;
-    private final Multiplier multiplier;
-
-    public SizeWithMultiplier(long base, Multiplier multiplier) {
-        this.base = base;
+    K(1024),
+    M(1024*1024),
+    G(1024*1024*1024),
+    T(1024*1024*1024*1024);
+    
+    private final long multiplier;
+    private Multiplier(long multiplier) {
         this.multiplier = multiplier;
     }
-
-    public long getBase() {
-        return base;
-    }
-
-    public Multiplier getMultiplier() {
+    
+    public long multiplier() {
         return multiplier;
-    }
-    
-    public long getNumber() {
-        return base * multiplier.multiplier();
-    }
-    
-    public static SizeWithMultiplier parseString(String in) {
-        Pattern p = Pattern.compile("(-?[0-9]+) *([KMGT])");
-        Matcher m = p.matcher(in);
-        if (m.matches()) {
-            long num = Long.parseLong(m.group(1));
-            Multiplier unit = Multiplier.valueOf(m.group(2));
-            return new SizeWithMultiplier(num, unit);
-        }
-        throw new IllegalArgumentException("Unparseable: "+in);
-    }
-    
-    @Override
-    public String toString() {
-        return Long.toString(base) + multiplier;
     }
 }

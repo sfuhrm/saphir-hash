@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package de.tynne.sphlib;
+package de.sfuhrm.sphlib;
 
 
 import fr.cryptohash.JCAProvider;

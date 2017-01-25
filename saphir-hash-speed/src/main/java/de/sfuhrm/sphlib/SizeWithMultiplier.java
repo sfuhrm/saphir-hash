@@ -23,11 +23,50 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-/**
- * <p>The package contains some speed test benchmarking code
- * to test the JCA provider and compare to Bouncycastle and SUN
- * implementations.</p>
- * @author Stephan Fuhrmann
- */
+package de.sfuhrm.sphlib;
 
-package de.tynne.sphlib;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * Number with multiplier, like "5 M".
+ * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ */
+public class SizeWithMultiplier {
+    
+    private final long base;
+    private final Multiplier multiplier;
+
+    public SizeWithMultiplier(long base, Multiplier multiplier) {
+        this.base = base;
+        this.multiplier = multiplier;
+    }
+
+    public long getBase() {
+        return base;
+    }
+
+    public Multiplier getMultiplier() {
+        return multiplier;
+    }
+    
+    public long getNumber() {
+        return base * multiplier.multiplier();
+    }
+    
+    public static SizeWithMultiplier parseString(String in) {
+        Pattern p = Pattern.compile("(-?[0-9]+) *([KMGT])");
+        Matcher m = p.matcher(in);
+        if (m.matches()) {
+            long num = Long.parseLong(m.group(1));
+            Multiplier unit = Multiplier.valueOf(m.group(2));
+            return new SizeWithMultiplier(num, unit);
+        }
+        throw new IllegalArgumentException("Unparseable: "+in);
+    }
+    
+    @Override
+    public String toString() {
+        return Long.toString(base) + multiplier;
+    }
+}
