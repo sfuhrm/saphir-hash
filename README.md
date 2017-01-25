@@ -58,7 +58,6 @@ doing
 	
 in the top library folder.
 
-
 ## Authors
 
 The original library was written by the "Projet RNRT SAPHIR", 
@@ -133,6 +132,13 @@ the String "test" in the platforms default character encoding:
         mdSH.update("test".getBytes());
         byte mdSHDigest[] = mdSH.digest();
 ```
+
+## Performance discussion
+
+The following image shows the performance of different algorithm implementations
+for a data size of 1M:
+
+![Performance Chart](graphics/Crypto-Perf.png "Algorithm implementations for 1M of data")
 
 
 ## License
