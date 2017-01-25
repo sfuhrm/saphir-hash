@@ -4,7 +4,7 @@
     <groupId>de.sfuhrm</groupId>
     <artifactId>saphir-hash-parent</artifactId>
     <packaging>pom</packaging>
-    <version>3.0.3-SNAPSHOT</version>
+    <version>3.0.4-SNAPSHOT</version>
     <name>Saphir Hash Parent</name>
     <description>Parent maven project that builds the sub projects.</description>
     <url>https://github.com/sfuhrm/saphir-hash</url>

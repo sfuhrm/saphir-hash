@@ -4,10 +4,10 @@
     <parent>
         <groupId>de.sfuhrm</groupId>
         <artifactId>saphir-hash-parent</artifactId>
-        <version>3.0.3-SNAPSHOT</version>
+        <version>3.0.4-SNAPSHOT</version>
     </parent>
     <artifactId>saphir-hash-core</artifactId>
-    <version>3.0.3-SNAPSHOT</version>
+    <version>3.0.4-SNAPSHOT</version>
     <name>Saphir Hash Core</name>
     <description>Implementations of Message Digest algorithms independent of standard Java message digest infrastructure. 
         Use saphir-hash-jca pom to add standard Java message digest infrastructure adapters.</description>
