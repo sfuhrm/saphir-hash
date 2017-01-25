@@ -103,7 +103,7 @@ You can use the code using the Maven repository.
 
 The core classes without JCA support is in this dependency (version may change):
 
-```
+```xml
 <dependency>
 	<groupId>de.sfuhrm</groupId>
 	<artifactId>saphir-hash-core</artifactId>
@@ -113,7 +113,7 @@ The core classes without JCA support is in this dependency (version may change):
 
 The JCA provider is contained in this dependency (version may change):
 
-```
+```xml
 <dependency>
 	<groupId>de.sfuhrm</groupId>
 	<artifactId>saphir-hash-jca</artifactId>
