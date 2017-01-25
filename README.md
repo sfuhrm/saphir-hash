@@ -1,4 +1,4 @@
-# Saphir Hash ![Travis CI](https://travis-ci.org/sfuhrm/saphir-hash.svg?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.tynne/saphir-hash/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.tynne/saphir-hash) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.tynne/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.tynne/saphir-hash-core) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.tynne/saphir-hash-jca/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.tynne/saphir-hash-jca) 
+# Saphir Hash ![Travis CI](https://travis-ci.org/sfuhrm/saphir-hash.svg?branch=master) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-jca/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-jca) 
 
 
 Saphir Hash is a Java library for calculating cryptographic message digests.
@@ -6,7 +6,7 @@ The library is derived from the sphlib 3.0 code that can be found here:
 
 [http://www.saphir2.com/sphlib/](http://www.saphir2.com/sphlib/ "sphlib 3.0 project page")
 
-The repackaged, mavenized and JCA-enabled version 3.0.1 and later can be found here:
+The repackaged, mavenized and JCA-enabled version 3.0.3 and later can be found here:
 
 [https://github.com/sfuhrm/saphir-hash](https://github.com/sfuhrm/saphir-hash "github saphir-hash project page")
 
@@ -44,7 +44,7 @@ JH224,256,384,512
 
 ## Documentation
 
-You can view the api docs online at http://carterino.de/tynne/saphir-hash/apidocs/
+You can view the api docs online at http://api.sfuhrm.de/saphir-hash/
 The documentation can be generated with the command
 
 	mvn javadoc:aggregate
@@ -86,7 +86,7 @@ All the actual code has been written by:
    
 The additions were written by:
 
-   Stephan Fuhrmann &lt;stephan at tynne.de&gt;
+   Stephan Fuhrmann &lt;s at sfuhrm.de&gt;
 
 ## List of changes
 
@@ -106,9 +106,9 @@ The core classes without JCA support is in this dependency (version may change):
 
 ```
 <dependency>
-	<groupId>de.tynne</groupId>
+	<groupId>de.sfuhrm</groupId>
 	<artifactId>saphir-hash-core</artifactId>
-	<version>3.0.1</version>
+	<version>3.0.3</version>
 </dependency>
 ```
 
@@ -116,9 +116,9 @@ The JCA provider is contained in this dependency (version may change):
 
 ```
 <dependency>
-	<groupId>de.tynne</groupId>
+	<groupId>de.sfuhrm</groupId>
 	<artifactId>saphir-hash-jca</artifactId>
-	<version>3.0.1</version>
+	<version>3.0.3</version>
 </dependency>
 ```
 
