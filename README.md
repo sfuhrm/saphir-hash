@@ -136,7 +136,7 @@ the String "test" in the platforms default character encoding:
 ## Performance discussion
 
 The following image shows the performance of different algorithm implementations
-for a data size of 1M:
+for a data size of 1M. The numbers are in milliseconds:
 
 ![Performance Chart](graphics/Crypto-Perf.png "Algorithm implementations for 1M of data")
 
