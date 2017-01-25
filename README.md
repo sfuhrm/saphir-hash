@@ -140,6 +140,10 @@ for a data size of 1M. The numbers are in milliseconds:
 
 ![Performance Chart](graphics/Crypto-Perf.png "Algorithm implementations for 1M of data")
 
+The implementations are:
+* JDK 1.8.0_121
+* Bouncy Castle 1.46
+* Saphir Hash JCA 3.0.3
 
 ## License
 
