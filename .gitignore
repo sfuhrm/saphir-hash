@@ -5,3 +5,5 @@
 /saphir-hash-core/target/
 /saphir-hash-jca/target/
 /saphir-hash-speed/target/
+*~
+*versionsBackup
