@@ -39,7 +39,12 @@
     <modules>
         <module>saphir-hash-core</module>
         <module>saphir-hash-jca</module>
+<!-- 
+        Due to this bug:
+        https://issues.sonatype.org/browse/NEXUS-9138
+        the skipNexusStagingDeployMojo does not work :-(
         <module>saphir-hash-speed</module>
+-->        
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
