@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,7 +29,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for Fugue224.
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public final class Fugue224Spi extends GenericAdapterSpi {
     public Fugue224Spi() {

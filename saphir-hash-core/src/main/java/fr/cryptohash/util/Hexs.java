@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,17 +27,17 @@ package fr.cryptohash.util;
 
 /**
  * Hexadecimal utils.
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public final class Hexs {
-    
+
     private Hexs() {
         // no instance
     }
-    
+
     final private static char[] hexArray = "0123456789ABCDEF".toCharArray();
 
-    /** Converts bytes to a hex String. 
+    /** Converts bytes to a hex String.
      * @param bytes the input bytes to convert.
      * @return hexadecimal chars (upper case) representing the input.
      * @see #hexArray
@@ -51,8 +51,8 @@ public final class Hexs {
         }
         return new String(hexChars);
     }
-    
-    /** Converts a hex String to bytes. 
+
+    /** Converts a hex String to bytes.
      * @param str a hexadecimal String.
      * @return the parsed bytes.
      * @throws NumberFormatException if the {@code String}

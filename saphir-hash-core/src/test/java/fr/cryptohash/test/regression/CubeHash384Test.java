@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

@@ -65,7 +65,7 @@ authorship: all writing was done on behalf of the Projet RNRT SAPHIR.
 Refactorings, adjustments to the Maven build tool and the junit testing
 framework were done by
 
-	Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+	Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
 
 Documentation
 =============
