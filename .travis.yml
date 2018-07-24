@@ -4,6 +4,12 @@ jdk:
   - openjdk8
   - oraclejdk8
   - oraclejdk9
+
 install: mvn install clirr:check -Dgpg.skip
+
 after_success:
   - mvn -DrepoToken=${coveralls_token} clean test jacoco:report coveralls:report --projects=saphir-hash-core
+
+cache:
+    directories:
+    - $HOME/.m2
