@@ -1,6 +1,5 @@
 package fr.cryptohash.test.additions;
 
-import fr.cryptohash.RIPEMD128;
 import fr.cryptohash.RIPEMD160;
 import fr.cryptohash.test.AbstractCryptoTest;
 import org.junit.Test;
@@ -37,6 +36,17 @@ public class RIPEMD160Test extends AbstractCryptoTest {
         testAsciiAndHex(new RIPEMD160(),
                 "message digest",
                 "5d0689ef49d2fae572b881b123a85ffa21595f36");
+    }
+
+    @Test
+    public void testWithEight() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            sb.append("1234567890");
+        }
+        testAsciiAndHex(new RIPEMD160(),
+                sb.toString(),
+                "9b752e45573d4b39f4dbd3323cab82bf63326bfb");
     }
 }
 

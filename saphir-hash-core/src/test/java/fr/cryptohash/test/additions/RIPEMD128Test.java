@@ -37,5 +37,16 @@ public class RIPEMD128Test extends AbstractCryptoTest {
                 "message digest",
                 "9e327b3d6e523062afc1132d7df9d1b8");
     }
+
+    @Test
+    public void testWithEight() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 8; i++) {
+            sb.append("1234567890");
+        }
+        testAsciiAndHex(new RIPEMD128(),
+                sb.toString(),
+                "3f45ef194732c2dbb2c4a2c769795fa3");
+    }
 }
 
