@@ -134,9 +134,12 @@ fr.cryptohash.JCAProvider and calculates a digest over
 the String "test" in the platforms default character encoding:
 
 ```java
-        MessageDigest mdSH = MessageDigest.getInstance("MD5", new JCAProvider());
-        mdSH.update("test".getBytes());
-        byte mdSHDigest[] = mdSH.digest();
+import fr.cryptohash.JCAProvider;
+...
+
+MessageDigest mdSH = MessageDigest.getInstance("MD5", new JCAProvider());
+mdSH.update("test".getBytes());
+byte mdSHDigest[] = mdSH.digest();
 ```
 
 ## Performance discussion
