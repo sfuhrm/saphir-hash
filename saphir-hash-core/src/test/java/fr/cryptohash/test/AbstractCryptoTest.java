@@ -28,6 +28,8 @@ package fr.cryptohash.test;
 import fr.cryptohash.Digest;
 import fr.cryptohash.util.Hexs;
 
+import java.nio.charset.Charset;
+
 import static org.junit.Assert.*;
 
 /**
@@ -37,8 +39,22 @@ import static org.junit.Assert.*;
  */
 public class AbstractCryptoTest {
 
-    protected void testHex(Digest dig, String data, String ref) {
-        testFrom(dig, Hexs.hexStringToBytes(data), Hexs.hexStringToBytes(ref));
+    /** Tests the digest with the given data.
+     * @param dig the digest to use.
+     * @param clearTextAscii the cleartext data in hex characters.
+     * @param referenceHex the reference result that is being expected in hex characters.
+     * */
+    protected void testAsciiAndHex(Digest dig, String clearTextAscii, String referenceHex) {
+        testFrom(dig, clearTextAscii.getBytes(Charset.forName("ASCII")), Hexs.hexStringToBytes(referenceHex));
+    }
+
+    /** Tests the digest with the given data.
+     * @param dig the digest to use.
+     * @param clearTextHex the cleartext data in hex characters.
+     * @param referenceHex the reference result that is being expected in hex characters.
+     * */
+    protected void testHex(Digest dig, String clearTextHex, String referenceHex) {
+        testFrom(dig, Hexs.hexStringToBytes(clearTextHex), Hexs.hexStringToBytes(referenceHex));
     }
 
 
