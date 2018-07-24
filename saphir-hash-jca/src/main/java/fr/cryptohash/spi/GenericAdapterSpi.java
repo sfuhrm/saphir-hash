@@ -37,8 +37,8 @@ class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
 
     /** Crypto hash digest algorithm. */
     private final Digest messageDigest;
-    
-    /** 
+
+    /**
      * Constructor for a new adapter.
      * @param messageDigest the cryptohash digest to adapt to.
      * @throws NullPointerException if messageDigest is {@code null}.
@@ -48,12 +48,12 @@ class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
             throw new NullPointerException("messageDigest is null");
         this.messageDigest = messageDigest;
     }
-    
+
     @Override
     protected int engineGetDigestLength() {
         return messageDigest.getDigestLength();
     }
-    
+
     @Override
     protected final void engineUpdate(byte input) {
         messageDigest.update(input);
@@ -68,18 +68,18 @@ class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
     protected final byte[] engineDigest() {
         return messageDigest.digest();
     }
-    
+
     @Override
     protected int engineDigest(byte[] buf, int offset, int len)
                                                 throws DigestException {
         return messageDigest.digest(buf, len, len);
-    }    
+    }
 
     @Override
     protected final void engineReset() {
         messageDigest.reset();
     }
-    
+
     /**
      * Returns a clone if the implementation is cloneable.
      *
@@ -90,10 +90,6 @@ class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
      */
     @Override
     public Object clone() throws CloneNotSupportedException {
-        if (this instanceof Cloneable) {
-            return super.clone();
-        } else {
-            throw new CloneNotSupportedException();
-        }
-    }    
+        return super.clone();
+    }
 }
