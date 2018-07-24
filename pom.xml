@@ -4,14 +4,14 @@
     <groupId>de.sfuhrm</groupId>
     <artifactId>saphir-hash-parent</artifactId>
     <packaging>pom</packaging>
-    <version>3.0.5</version>
+    <version>3.0.6-SNAPSHOT</version>
     <name>Saphir Hash Parent</name>
     <description>Parent maven project that builds the sub projects.</description>
     <url>https://github.com/sfuhrm/saphir-hash</url>
     <scm>
         <url>https://github.com/sfuhrm/saphir-hash</url>
         <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
-      <tag>v3.0.5</tag>
+      <tag>HEAD</tag>
   </scm>
     <licenses>
         <license>
