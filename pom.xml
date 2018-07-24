@@ -93,10 +93,14 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
+                        <id>aggregate</id>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>aggregate</goal>
                         </goals>
+                        <phase>site</phase>
+                        <configuration>
+                            <excludePackageNames>de.sfuhrm.sphlib</excludePackageNames>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
