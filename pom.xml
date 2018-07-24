@@ -90,7 +90,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.0.1</version>
                 <configuration>
-                    <excludePackageNames>de.sfuhrm.sphlib</excludePackageNames>
+                	<!-- Nexus wants de.sfuhrm.sphlib -->
                 </configuration>
                 <executions>
                     <execution>
