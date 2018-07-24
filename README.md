@@ -113,7 +113,7 @@ The core classes without JCA support is in this dependency (version may change):
 <dependency>
 	<groupId>de.sfuhrm</groupId>
 	<artifactId>saphir-hash-core</artifactId>
-	<version>3.0.3</version>
+	<version>3.0.5</version>
 </dependency>
 ```
 
@@ -123,7 +123,7 @@ The JCA provider is contained in this dependency (version may change):
 <dependency>
 	<groupId>de.sfuhrm</groupId>
 	<artifactId>saphir-hash-jca</artifactId>
-	<version>3.0.3</version>
+	<version>3.0.5</version>
 </dependency>
 ```
 
