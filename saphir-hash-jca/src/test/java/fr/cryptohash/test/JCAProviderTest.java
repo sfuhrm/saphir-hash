@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -45,34 +45,34 @@ public class JCAProviderTest {
 
     @Test
     public void testShortWithMD5() throws NoSuchAlgorithmException, NoSuchProviderException {
-        
+
         MessageDigest mdDef = MessageDigest.getInstance("MD5");
         MessageDigest mdSH = MessageDigest.getInstance("MD5", new JCAProvider());
-        
+
         mdDef.update("test".getBytes());
         mdSH.update("test".getBytes());
-        
+
         byte mdDefDigest[] = mdDef.digest();
         byte mdSHDigest[] = mdSH.digest();
-        
+
         Assert.assertEquals(Hexs.bytesToHexString(mdDefDigest), Hexs.bytesToHexString(mdSHDigest));
     }
-    
+
     @Test
     public void testLongWithMD5() throws NoSuchAlgorithmException, NoSuchProviderException {
-        
+
         MessageDigest mdDef = MessageDigest.getInstance("MD5");
         MessageDigest mdSH = MessageDigest.getInstance("MD5", new JCAProvider());
-        
+
         for (int i=0; i < 1000; i++) {
             String str = i+"test";
             mdDef.update(str.getBytes());
             mdSH.update(str.getBytes());
         }
-        
+
         byte mdDefDigest[] = mdDef.digest();
         byte mdSHDigest[] = mdSH.digest();
-        
+
         Assert.assertEquals(Hexs.bytesToHexString(mdDefDigest), Hexs.bytesToHexString(mdSHDigest));
     }
 }

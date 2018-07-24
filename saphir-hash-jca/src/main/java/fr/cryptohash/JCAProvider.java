@@ -8,20 +8,22 @@ import java.util.regex.Pattern;
 
 /**
  * A JCA provider implementation for SPH-Lib.
- * The provider is called <code>SPH</code> derived from the original 
+ * The provider is called <code>SPH</code> derived from the original
  * "Projet RNRT SAPHIR" by the french government.
  *
  * @see <a href="http://www.saphir2.com/sphlib/">Original sphlib 3.0 Website</a>
  * @see <a
  * href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/HowToImplAProvider.html">How
  * to Implement a Provider in the Java Cryptography Architecture</a>
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public final class JCAProvider extends Provider {
 
     /** The provider name as passed to JCA. */
     public final static String PROVIDER_NAME = "SPH";
-    
+
+    /** Constructor for the JCA Provider for Saphir-Hash.
+     * */
     public JCAProvider() {
         super(PROVIDER_NAME, 3.0, "SPH-Library provider v3.0, implementing "
                 + "multiple message digest algorithms.");
@@ -29,22 +31,30 @@ public final class JCAProvider extends Provider {
         Map<String,String> names = getNames();
         putAll(names);
     }
-    
+
+    /** Gets the names and the aliases of all message digest
+     * algorithms.
+     * @return a map mapping from algorithm name / alias to algorithm class.
+     * */
     private static Map<String, String> getNames() {
         Map<String,String> result = new HashMap<String, String>();
         fillNames(result);
         result.putAll(createAliases(result));
         return result;
     }
-    
-    /** Fills some aliases. */
+
+    /** Creates some aliases for an input map.
+     * @param map a map with keys being algorithm names of the form "MessageDigest.BMW224"
+     *            and the keys being java class names.
+     * @return a map mapping from algorithm name / alias to algorithm class.
+     * */
     private static Map<String,String> createAliases(Map<String, String> map) {
         Map<String, String> aliases = new HashMap<String, String>();
         Pattern pattern = Pattern.compile("([^0-9]*)([0-9]+)");
         for (Map.Entry<String,String> entry : map.entrySet()) {
             Matcher matcher = pattern.matcher(entry.getKey());
             if (matcher.matches()) {
-                
+
                 // adds for MessageDigest.SHA512 an alias like MessageDigest.SHA-512
                 aliases.put(
                         matcher.group(1)+
@@ -54,7 +64,11 @@ public final class JCAProvider extends Provider {
         }
         return aliases;
     }
-        
+
+    /** Fills a map with the names of all algorithms in
+     * Saphir-Hash.
+     * @param map the map to fill the algorithm names in.
+     * */
     private static void fillNames(Map<String, String> map) {
         map.put("MessageDigest.BLAKE224", "fr.cryptohash.spi.BLAKE224Spi");
         map.put("MessageDigest.BLAKE256", "fr.cryptohash.spi.BLAKE256Spi");
@@ -150,6 +164,6 @@ public final class JCAProvider extends Provider {
         map.put("MessageDigest.Tiger", "fr.cryptohash.spi.TigerSpi");
         map.put("MessageDigest.Whirlpool0", "fr.cryptohash.spi.Whirlpool0Spi");
         map.put("MessageDigest.Whirlpool1", "fr.cryptohash.spi.Whirlpool1Spi");
-        map.put("MessageDigest.Whirlpool", "fr.cryptohash.spi.WhirlpoolSpi");        
+        map.put("MessageDigest.Whirlpool", "fr.cryptohash.spi.WhirlpoolSpi");
     }
 }

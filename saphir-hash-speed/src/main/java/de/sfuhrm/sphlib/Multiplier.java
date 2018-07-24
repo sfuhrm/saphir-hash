@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,20 +27,20 @@ package de.sfuhrm.sphlib;
 
 /**
  * Size unit multiplier.
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public enum Multiplier {
-    
+
     K(1024),
     M(1024*1024),
     G(1024*1024*1024),
     T(1024*1024*1024*1024);
-    
+
     private final long multiplier;
     private Multiplier(long multiplier) {
         this.multiplier = multiplier;
     }
-    
+
     public long multiplier() {
         return multiplier;
     }

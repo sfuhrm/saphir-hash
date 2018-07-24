@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,7 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
  * Compares speed of SH-Lib, Bouncy castle and SUN providers.
  *
  * @see <a href="https://www.bouncycastle.org/">Bouncy Castle Project</a>
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public class SpeedTest {
 
@@ -48,14 +48,14 @@ public class SpeedTest {
 
     public SpeedTest(Arguments arguments) throws NoSuchAlgorithmException {
         this.arguments = arguments;
-        
+
         providers = new HashMap<String, Provider>();
         providers.put("BC", new BouncyCastleProvider());
         providers.put("SPH", new JCAProvider());
         providers.put("SUN", MessageDigest.getInstance("MD5").getProvider());
-        
-    }    
-    
+
+    }
+
     private static class TestSpec {
         long byteSize;
         String name;
@@ -65,14 +65,14 @@ public class SpeedTest {
             this.name = name;
         }
     }
-    
+
     public static void main(String args[]) throws NoSuchAlgorithmException, NoSuchProviderException {
-        
+
         Arguments cliArgs = Arguments.parse(args);
         if (cliArgs == null) {
             return;
         }
-        
+
         SpeedTest test = new SpeedTest(cliArgs);
         test.speedTest();
     }
@@ -82,25 +82,25 @@ public class SpeedTest {
         for (String prov : arguments.getProviders())
             System.out.print(","+prov+"Name,"+prov+"TimeMillis");
         System.out.println();
-        
+
         for (String algo : arguments.getAlgorithms()) {
 
             for (SizeWithMultiplier spec : arguments.getSizes()) {
                 boolean first = true;
-                
+
                 for (String provider : arguments.getProviders()) {
-                    
+
                     Provider providerInstance = providers.get(provider);
-                    
+
                     MessageDigest messageDigest = MessageDigest.getInstance(algo, providerInstance);
                     // once without output to hopefully JIT compile
                     test(algo, spec, messageDigest, false, first);
                     // once with output
                     test(algo, spec, messageDigest, true, first);
-                    
+
                     first = false;
                 }
-                
+
                 System.out.println();
             }
         }

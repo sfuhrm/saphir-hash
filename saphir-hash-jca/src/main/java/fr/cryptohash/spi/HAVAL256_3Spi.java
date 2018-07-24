@@ -29,7 +29,7 @@ import fr.cryptohash.*;
 
 /**
  * Implementation for HAVAL256_3.
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public final class HAVAL256_3Spi extends GenericAdapterSpi {
     public HAVAL256_3Spi() {

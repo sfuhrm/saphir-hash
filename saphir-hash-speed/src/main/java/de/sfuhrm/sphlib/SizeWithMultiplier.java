@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,10 +30,10 @@ import java.util.regex.Pattern;
 
 /**
  * Number with multiplier, like "5 M".
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public class SizeWithMultiplier {
-    
+
     private final long base;
     private final Multiplier multiplier;
 
@@ -49,11 +49,11 @@ public class SizeWithMultiplier {
     public Multiplier getMultiplier() {
         return multiplier;
     }
-    
+
     public long getNumber() {
         return base * multiplier.multiplier();
     }
-    
+
     public static SizeWithMultiplier parseString(String in) {
         Pattern p = Pattern.compile("(-?[0-9]+) *([KMGT])");
         Matcher m = p.matcher(in);
@@ -64,7 +64,7 @@ public class SizeWithMultiplier {
         }
         throw new IllegalArgumentException("Unparseable: "+in);
     }
-    
+
     @Override
     public String toString() {
         return Long.toString(base) + multiplier;

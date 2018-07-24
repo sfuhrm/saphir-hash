@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -39,72 +39,72 @@ import org.junit.Test;
  * @author Stephan Fuhrmann
  */
 public abstract class AbstractCompareToSunJCATest {
-    
+
     /** SUN implementation for reference. */
     private MessageDigest sun;
-    
+
     /** SH-Lib implementation for test. */
     private MessageDigest sh;
-    
+
     /** Returns the digest name as known to {@link MessageDigest#getInstance(java.lang.String) }.
      * @return the message digest algorithm name.
      */
     protected abstract String getMessageDigestName();
-    
+
     @Before
     public void init() throws NoSuchAlgorithmException {
         sun = MessageDigest.getInstance(getMessageDigestName());
         sh= MessageDigest.getInstance(getMessageDigestName(), new JCAProvider());
     }
-    
+
     @Test
     public void testClone() throws CloneNotSupportedException {
         MessageDigest sh2 = (MessageDigest) sh.clone();
         Assert.assertEquals(sh.getClass(), sh2.getClass());
         Assert.assertNotSame(sh, sh2);
     }
-    
+
     @Test
     public void testGetDigestLength() {
         Assert.assertEquals(sun.getDigestLength(), sh.getDigestLength());
     }
-    
+
     @Test
     public void testEmpty() {
         byte sunDigest[] = sun.digest();
         byte shDigest[] = sh.digest();
-        
+
         Assert.assertArrayEquals(sunDigest, shDigest);
     }
-        
+
     @Test
     public void test1k() {
         byte in[] = new byte[1024];
         byte sunDigest[] = sun.digest(in);
         byte shDigest[] = sh.digest(in);
-        
+
         Assert.assertArrayEquals(sunDigest, shDigest);
     }
-    
+
     @Test
     public void test1kWith3Calls() {
         byte in[] = new byte[1024];
-        
+
         for (int i=0; i < in.length; i++) {
             in[i] = (byte)i;
         }
-        
+
         sun.update(in, 0, 256);
         sh.update(in, 0, 256);
         sun.update(in, 256, 1024-256);
         sh.update(in, 256, 1024-256);
-        
+
         byte sunDigest[] = sun.digest();
         byte shDigest[] = sh.digest();
-        
+
         Assert.assertArrayEquals(sunDigest, shDigest);
     }
-    
+
     @Test
     public void testWithByteUpdates() {
         byte in[] = new byte[1024];
@@ -116,13 +116,13 @@ public abstract class AbstractCompareToSunJCATest {
             sun.update(in[i]);
             sh.update(in[i]);
         }
-        
+
         byte sunDigest[] = sun.digest();
         byte shDigest[] = sh.digest();
-        
+
         Assert.assertArrayEquals(sunDigest, shDigest);
     }
-    
+
     @Test
     public void testMultipleWithByteUpdates() {
         byte in[] = new byte[1024];
@@ -134,7 +134,7 @@ public abstract class AbstractCompareToSunJCATest {
 
             sun.reset();
             sh.reset();
-            
+
             for (int j = 0; i < in.length; i++) {
                 sun.update(in[j]);
                 sh.update(in[j]);
@@ -145,5 +145,5 @@ public abstract class AbstractCompareToSunJCATest {
 
             Assert.assertArrayEquals(sunDigest, shDigest);
         }
-    }    
+    }
 }

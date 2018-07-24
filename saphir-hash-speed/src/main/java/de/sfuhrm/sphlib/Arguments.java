@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * Copyright (c) 2014, Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,16 +31,16 @@ import org.kohsuke.args4j.Option;
 
 /**
  *
- * @author Stephan Fuhrmann &lt;stephan@tynne.de&gt;
+ * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
 public class Arguments {
-    
+
     @Option(name = "-providers", aliases = "-p", usage = "Comma separated names of providers to benchmark (defaults to all)", metaVar = "provider")
     private String providers = "SUN,BC,SPH";
 
     @Option(name = "-algorithms", aliases = "-a", usage = "Comma separated algorithms to benchmark (defaults to all)", metaVar =  "algorithm")
     private String algorithms = "MD2,MD5,SHA,SHA-224,SHA-256,SHA-384,SHA-512";
-    
+
     @Option(name = "-sizes", aliases = "-s", usage = "Comma separated sizes to benchmark", metaVar =  "1K,5M")
     private String sizes = "100K,1M,100M";
 
@@ -55,7 +55,7 @@ public class Arguments {
         if (args == null)
             throw new NullPointerException();
         Arguments bean = new Arguments();
-        
+
         CmdLineParser parser = new CmdLineParser(bean);
 
         try {
@@ -91,11 +91,11 @@ public class Arguments {
     public String[] getProviders() {
         return providers.split(",");
     }
-    
+
     public SizeWithMultiplier[] getSizes() {
        String str[] = sizes.split(",");
        SizeWithMultiplier[] result = new SizeWithMultiplier[str.length];
-       
+
        for (int i=0; i < str.length; i++) {
            result[i] = SizeWithMultiplier.parseString(str[i]);
        }
