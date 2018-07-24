@@ -37,8 +37,7 @@ public final class JCAProvider extends Provider {
      * @return a map mapping from algorithm name / alias to algorithm class.
      * */
     private static Map<String, String> getNames() {
-        Map<String,String> result = new HashMap<String, String>();
-        fillNames(result);
+        Map<String,String> result = getSaphirHashnames();
         result.putAll(createAliases(result));
         return result;
     }
@@ -67,9 +66,10 @@ public final class JCAProvider extends Provider {
 
     /** Fills a map with the names of all algorithms in
      * Saphir-Hash.
-     * @param map the map to fill the algorithm names in.
+     * @return mapping from algorithm name to class name.
      * */
-    private static void fillNames(Map<String, String> map) {
+    private static Map<String, String> getSaphirHashnames() {
+        Map<String, String> map = new HashMap<String, String>();
         map.put("MessageDigest.BLAKE224", "fr.cryptohash.spi.BLAKE224Spi");
         map.put("MessageDigest.BLAKE256", "fr.cryptohash.spi.BLAKE256Spi");
         map.put("MessageDigest.BLAKE384", "fr.cryptohash.spi.BLAKE384Spi");
@@ -165,5 +165,6 @@ public final class JCAProvider extends Provider {
         map.put("MessageDigest.Whirlpool0", "fr.cryptohash.spi.Whirlpool0Spi");
         map.put("MessageDigest.Whirlpool1", "fr.cryptohash.spi.Whirlpool1Spi");
         map.put("MessageDigest.Whirlpool", "fr.cryptohash.spi.WhirlpoolSpi");
+        return map;
     }
 }
