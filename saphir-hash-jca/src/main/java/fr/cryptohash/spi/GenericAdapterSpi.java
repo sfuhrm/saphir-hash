@@ -79,17 +79,4 @@ class GenericAdapterSpi extends MessageDigestSpi implements Cloneable {
     protected final void engineReset() {
         messageDigest.reset();
     }
-
-    /**
-     * Returns a clone if the implementation is cloneable.
-     *
-     * @return a clone if the implementation is cloneable.
-     *
-     * @exception CloneNotSupportedException if this is called on an
-     * implementation that does not support {@code Cloneable}.
-     */
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
 }
