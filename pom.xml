@@ -39,12 +39,7 @@
     <modules>
         <module>saphir-hash-core</module>
         <module>saphir-hash-jca</module>
-<!-- 
-        Due to this bug:
-        https://issues.sonatype.org/browse/NEXUS-9138
-        the skipNexusStagingDeployMojo does not work :-(
         <module>saphir-hash-speed</module>
--->        
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,7 +48,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
@@ -62,7 +57,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
+                <version>3.1.0</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -92,7 +87,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
+                <version>3.0.1</version>
                 <configuration>
                     <excludePackageNames>de.sfuhrm.sphlib</excludePackageNames>
                 </configuration>
@@ -108,7 +103,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
+                <version>1.6.8</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
@@ -135,69 +130,6 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
-        <profile> 
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
-                        <configuration>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>aggregate</id>
-                                <goals>
-                                    <goal>aggregate</goal>
-                                </goals>
-                                <phase>package</phase>
-                                <configuration>
-                                    <!-- remove the speed test from the javadoc -->
-                                    <excludePackageNames>de.sfuhrm.sphlib</excludePackageNames>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <version>3.0.0</version>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>src/main/assembly/full.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <keyname>3EAD41F1</keyname>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>                  
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>

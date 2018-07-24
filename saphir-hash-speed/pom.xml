@@ -5,25 +5,12 @@
     <parent>
         <groupId>de.sfuhrm</groupId>
         <artifactId>saphir-hash-parent</artifactId>
-        <version>3.0.3-SNAPSHOT</version>
+        <version>3.0.4-SNAPSHOT</version>
     </parent>
     <artifactId>saphir-hash-speed</artifactId>
     <name>Saphir Hash Speed Test</name>
     <description>Speed benchmark code that is probably not interesting for anyone. Compares JDK message digest implementations with those of saphir-hash.</description>
     <packaging>jar</packaging>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>    
     <dependencies>
         <dependency>
             <groupId>de.sfuhrm</groupId>
