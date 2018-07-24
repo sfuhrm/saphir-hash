@@ -7,7 +7,6 @@
         <version>3.0.4-SNAPSHOT</version>
     </parent>
     <artifactId>saphir-hash-jca</artifactId>
-    <version>3.0.4-SNAPSHOT</version>
     <name>Saphir Hash JCA Provider</name>
     <description>Adapter classes from saphir-hash message digestsd to the standard Java message digest infrastructure.
         Comes as a JCA crypto provider called 'SPH'.</description>
