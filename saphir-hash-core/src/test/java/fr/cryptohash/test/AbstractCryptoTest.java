@@ -26,7 +26,9 @@
 package fr.cryptohash.test;
 
 import fr.cryptohash.Digest;
+import fr.cryptohash.DigestEngine;
 import fr.cryptohash.util.Hexs;
+import org.junit.Before;
 
 import java.nio.charset.Charset;
 
@@ -37,56 +39,17 @@ import static org.junit.Assert.*;
  * classes.
  * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
-public class AbstractCryptoTest {
+public class AbstractCryptoTest<T extends DigestEngine> {
 
-    /** Tests the digest with the given data.
-     * @param dig the digest to use.
-     * @param clearTextAscii the cleartext data in hex characters.
-     * @param referenceHex the reference result that is being expected in hex characters.
-     * */
-    protected void testAsciiAndHex(Digest dig, String clearTextAscii, String referenceHex) {
-        testFrom(dig, clearTextAscii.getBytes(Charset.forName("ASCII")), Hexs.hexStringToBytes(referenceHex));
+    protected Class<T> clazz;
+    protected T instance;
+
+    protected AbstractCryptoTest(Class<T> inClass) {
+        this.clazz = inClass;
     }
 
-    /** Tests the digest with the given data.
-     * @param dig the digest to use.
-     * @param clearTextHex the cleartext data in hex characters.
-     * @param referenceHex the reference result that is being expected in hex characters.
-     * */
-    protected void testHex(Digest dig, String clearTextHex, String referenceHex) {
-        testFrom(dig, Hexs.hexStringToBytes(clearTextHex), Hexs.hexStringToBytes(referenceHex));
-    }
-
-
-    /** Does the comparison using the digest and some calls on it.
-     * @param digest the digest to operate on.
-     * @param message the input data to pass to the digest.
-     * @param expected the expected data out of the digest.
-     */
-    private static void testFrom(Digest digest, byte[] message, byte[] expected) {
-        /*
-         * First test the hashing itself.
-         */
-        byte[] out = digest.digest(message);
-        assertArrayEquals(expected, out);
-
-        /*
-         * Now the update() API; this also exercises auto-reset.
-         */
-        for (int i = 0; i < message.length; i++) {
-            digest.update(message[i]);
-        }
-        assertArrayEquals(expected, digest.digest());
-
-        /*
-         * The cloning API.
-         */
-        int blen = message.length;
-        digest.update(message, 0, blen / 2);
-        Digest dig2 = digest.copy();
-        digest.update(message, blen / 2, blen - (blen / 2));
-        assertArrayEquals(expected, digest.digest());
-        dig2.update(message, blen / 2, blen - (blen / 2));
-        assertArrayEquals(expected, dig2.digest());
+    @Before
+    public void before() throws IllegalAccessException, InstantiationException {
+        instance = clazz.newInstance();
     }
 }
