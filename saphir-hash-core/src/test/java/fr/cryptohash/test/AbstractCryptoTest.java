@@ -29,6 +29,7 @@ import fr.cryptohash.Digest;
 import fr.cryptohash.DigestEngine;
 import fr.cryptohash.util.Hexs;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.nio.charset.Charset;
 
@@ -39,7 +40,7 @@ import static org.junit.Assert.*;
  * classes.
  * @author Stephan Fuhrmann &lt;s@sfuhrm.de&gt;
  */
-public class AbstractCryptoTest<T extends DigestEngine> {
+public abstract class AbstractCryptoTest<T extends Digest> {
 
     protected Class<T> clazz;
     protected T instance;
@@ -51,5 +52,40 @@ public class AbstractCryptoTest<T extends DigestEngine> {
     @Before
     public void before() throws IllegalAccessException, InstantiationException {
         instance = clazz.newInstance();
+    }
+
+    public T instance() {
+        return instance;
+    }
+
+    @Test
+    public void testInstance() {
+        assertNotNull(instance());
+    }
+
+    @Test
+    public void testDigestWithEmpty() {
+        T myInstance = instance();
+        byte[] data = myInstance.digest();
+        assertNotNull(data);
+        assertTrue("data size bigger 0", data.length > 0);
+        assertEquals(myInstance.getDigestLength(), data.length);
+    }
+
+    @Test
+    public void testCopy() {
+        T myInstance = instance();
+        Digest copy = myInstance.copy();
+        assertNotNull(copy);
+        assertNotSame(myInstance, copy);
+        assertTrue("copy is instance", clazz.isInstance(copy));
+    }
+
+    @Test
+    public void testToString() {
+        T myInstance = instance();
+        String str = myInstance.toString();
+        assertNotNull(str);
+        assertTrue("toString() is empty", str.length() > 0);
     }
 }

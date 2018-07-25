@@ -16,17 +16,17 @@ public class MD5Test extends AbstractCryptoTest<MD5> {
 
     @Test
     public void testWithLength0() {
-        CryptoHelpers.testAsciiAndHex(new MD5(), "", "d41d8cd98f00b204e9800998ecf8427e");
+        CryptoHelpers.testAsciiAndHex(instance(), "", "d41d8cd98f00b204e9800998ecf8427e");
     }
 
     @Test
     public void testWithDog() {
-        CryptoHelpers.testAsciiAndHex(new MD5(), "The quick brown fox jumps over the lazy dog", "9e107d9d372bb6826bd81d3542a419d6");
+        CryptoHelpers.testAsciiAndHex(instance(), "The quick brown fox jumps over the lazy dog", "9e107d9d372bb6826bd81d3542a419d6");
     }
 
     @Test
     public void testWithDogDot() {
-        CryptoHelpers.testAsciiAndHex(new MD5(), "The quick brown fox jumps over the lazy dog.", "e4d909c290d0fb1ca068ffaddf22cbd0");
+        CryptoHelpers.testAsciiAndHex(instance(), "The quick brown fox jumps over the lazy dog.", "e4d909c290d0fb1ca068ffaddf22cbd0");
     }
 }
 
