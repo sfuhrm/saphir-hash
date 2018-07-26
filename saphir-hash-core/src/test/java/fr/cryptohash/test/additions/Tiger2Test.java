@@ -1,6 +1,5 @@
 package fr.cryptohash.test.additions;
 
-import fr.cryptohash.Tiger;
 import fr.cryptohash.Tiger2;
 import fr.cryptohash.test.AbstractCryptoTest;
 import fr.cryptohash.test.CryptoHelpers;
