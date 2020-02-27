@@ -4,7 +4,7 @@
 
   <groupId>de.sfuhrm</groupId>
   <artifactId>saphir-hash-parent</artifactId>
-  <version>3.0.6-SNAPSHOT</version>
+  <version>3.0.6</version>
   <packaging>pom</packaging>
 
   <name>Saphir Hash Parent</name>
@@ -39,7 +39,7 @@
   <scm>
     <url>https://github.com/sfuhrm/saphir-hash</url>
     <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
-    <tag>HEAD</tag>
+    <tag>saphir-hash-parent-3.0.6</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
@@ -114,6 +114,10 @@
             </goals>
           </execution>
         </executions>
+        <!-- see bug JDK-8212233 -->
+        <configuration>
+          <source>7</source>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
