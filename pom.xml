@@ -106,19 +106,12 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.1.1</version>
-        <configuration>
-          <!-- Nexus wants de.sfuhrm.sphlib -->
-        </configuration>
         <executions>
           <execution>
-            <id>aggregate</id>
+            <id>attach-javadocs</id>
             <goals>
-              <goal>aggregate</goal>
+              <goal>jar</goal>
             </goals>
-            <phase>site</phase>
-            <configuration>
-              <excludePackageNames>de.sfuhrm.sphlib</excludePackageNames>
-            </configuration>
           </execution>
         </executions>
       </plugin>
