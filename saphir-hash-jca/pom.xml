@@ -1,21 +1,25 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>de.sfuhrm</groupId>
-        <artifactId>saphir-hash-parent</artifactId>
-        <version>3.0.6-SNAPSHOT</version>
-    </parent>
-    <artifactId>saphir-hash-jca</artifactId>
-    <name>Saphir Hash JCA Provider</name>
-    <description>Adapter classes from saphir-hash message digestsd to the standard Java message digest infrastructure.
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.sfuhrm</groupId>
+    <artifactId>saphir-hash-parent</artifactId>
+    <version>3.0.6-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>saphir-hash-jca</artifactId>
+  <packaging>jar</packaging>
+
+  <name>Saphir Hash JCA Provider</name>
+  <description>Adapter classes from saphir-hash message digestsd to the standard Java message digest infrastructure.
         Comes as a JCA crypto provider called 'SPH'.</description>
-    <packaging>jar</packaging>
-    <dependencies>
-        <dependency>
-            <groupId>de.sfuhrm</groupId>
-            <artifactId>saphir-hash-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+
+  <dependencies>
+    <dependency>
+      <groupId>de.sfuhrm</groupId>
+      <artifactId>saphir-hash-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>
