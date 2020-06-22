@@ -36,7 +36,7 @@ import org.kohsuke.args4j.Option;
 public class Arguments {
 
     @Option(name = "-providers", aliases = "-p", usage = "Comma separated names of providers to benchmark (defaults to all)", metaVar = "provider")
-    private String providers = "SUN,BC,SPH";
+    private String providers = "SUN,BC,SPH,OSSL";
 
     @Option(name = "-algorithms", aliases = "-a", usage = "Comma separated algorithms to benchmark (defaults to all)", metaVar =  "algorithm")
     private String algorithms = "MD2,MD5,SHA,SHA-224,SHA-256,SHA-384,SHA-512";

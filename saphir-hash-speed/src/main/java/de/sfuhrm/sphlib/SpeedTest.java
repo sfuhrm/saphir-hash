@@ -26,7 +26,10 @@
 package de.sfuhrm.sphlib;
 
 
+import de.sfuhrm.openssl4j.OpenSSLProvider;
 import fr.cryptohash.JCAProvider;
+
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -46,13 +49,14 @@ public class SpeedTest {
     private final Arguments arguments;
     private final Map<String, Provider> providers;
 
-    public SpeedTest(Arguments arguments) throws NoSuchAlgorithmException {
+    public SpeedTest(Arguments arguments) throws NoSuchAlgorithmException, IOException {
         this.arguments = arguments;
 
         providers = new HashMap<String, Provider>();
         providers.put("BC", new BouncyCastleProvider());
         providers.put("SPH", new JCAProvider());
         providers.put("SUN", MessageDigest.getInstance("MD5").getProvider());
+        providers.put("OSSL", new OpenSSLProvider());
 
     }
 
@@ -66,7 +70,7 @@ public class SpeedTest {
         }
     }
 
-    public static void main(String args[]) throws NoSuchAlgorithmException, NoSuchProviderException {
+    public static void main(String args[]) throws NoSuchAlgorithmException, NoSuchProviderException, IOException {
 
         Arguments cliArgs = Arguments.parse(args);
         if (cliArgs == null) {
