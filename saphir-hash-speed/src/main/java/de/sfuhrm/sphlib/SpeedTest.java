@@ -34,7 +34,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.Provider;
+import java.util.Formatter;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
@@ -84,7 +86,7 @@ public class SpeedTest {
     private void speedTest() throws NoSuchAlgorithmException, NoSuchProviderException {
         System.out.print("Algo,Size");
         for (String prov : arguments.getProviders())
-            System.out.print(","+prov+"Name,"+prov+"TimeMillis");
+            System.out.print(","+prov+"Name,"+prov+"MBperS");
         System.out.println();
 
         for (String algo : arguments.getAlgorithms()) {
@@ -120,20 +122,32 @@ public class SpeedTest {
     private static void test(String algo, SizeWithMultiplier spec, MessageDigest md, boolean verbose, boolean first) {
         byte oneK[] = new byte[1024];
 
+        long byteCount = 0;
         long start = System.nanoTime();
 
         for (int count = 0; count < spec.getNumber(); count += oneK.length) {
+            byteCount += oneK.length;
             md.update(oneK);
         }
         md.digest();
 
         long end = System.nanoTime();
 
+        double mBytes = byteCount / (1024.*1024.);
+        double secs = (end-start) / 1000000000.;
+        double mBytesPerSec = mBytes / secs;
+        Formatter f = new Formatter(System.out, Locale.ENGLISH);
         if (verbose) {
             if (first) {
-                System.out.print(algo + "," + spec + "," + md.getProvider().getName() + ","  + (end - start));
+                f.format("%s,%s,%s,%g",
+                        algo,
+                        spec,
+                        md.getProvider().getName(),
+                        mBytesPerSec);
             } else {
-                System.out.print(","+md.getProvider().getName() + ","  + (end - start));
+                f.format(",%s,%g",
+                        md.getProvider().getName(),
+                        mBytesPerSec);
             }
         }
     }

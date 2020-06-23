@@ -39,7 +39,7 @@ public class Arguments {
     private String providers = "SUN,BC,SPH,OSSL";
 
     @Option(name = "-algorithms", aliases = "-a", usage = "Comma separated algorithms to benchmark (defaults to all)", metaVar =  "algorithm")
-    private String algorithms = "MD2,MD5,SHA,SHA-224,SHA-256,SHA-384,SHA-512";
+    private String algorithms = "MD5,SHA1,SHA-224,SHA-256,SHA-384,SHA-512";
 
     @Option(name = "-sizes", aliases = "-s", usage = "Comma separated sizes to benchmark", metaVar =  "1K,5M")
     private String sizes = "100K,1M,100M";
