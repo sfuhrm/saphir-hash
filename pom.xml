@@ -33,7 +33,6 @@
   <modules>
     <module>saphir-hash-core</module>
     <module>saphir-hash-jca</module>
-    <module>saphir-hash-speed</module>
   </modules>
 
   <scm>
