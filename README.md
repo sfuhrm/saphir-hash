@@ -1,6 +1,6 @@
 Saphir Hash
 ===================
-![Travis CI](https://travis-ci.org/sfuhrm/saphir-hash.svg?branch=master) 
+[![Circle CI Status](https://img.shields.io/circleci/build/github/sfuhrm/saphir-hash?style=plastic)](https://app.circleci.com/pipelines/github/sfuhrm/saphir-hash)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/932b4f7debba4e59907f3477db7f9cdc)](https://www.codacy.com/app/sfuhrm/saphir-hash?utm_source=github.com&utm_medium=referral&utm_content=sfuhrm/saphir-hash&utm_campaign=badger) 
 [![Coverage Status](https://coveralls.io/repos/github/sfuhrm/saphir-hash/badge.svg)](https://coveralls.io/github/sfuhrm/saphir-hash) 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core) 
@@ -88,7 +88,7 @@ We use the "Projet RNRT SAPHIR" expression to designate both SAPHIR and SAPHIR2.
 All the actual code has been written by:
 
    Thomas Pornin &lt;thomas.pornin at cryptolog.com&gt;
-   
+
 The additions were written by:
 
    Stephan Fuhrmann &lt;s at sfuhrm.de&gt;
