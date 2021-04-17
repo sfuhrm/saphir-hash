@@ -51,7 +51,7 @@ JH224,256,384,512
 Documentation
 ----------------
 
-You can view the api docs online at http://api.sfuhrm.de/saphir-hash/
+You can view the api docs online at [javadoc.io](https://javadoc.io/doc/de.sfuhrm/saphir-hash-core).
 The documentation can be generated with the command
 
 ```bash
@@ -73,8 +73,8 @@ in the top library folder.
 Authors
 ----------------
 
-The original library was written by the "Projet RNRT SAPHIR", 
-which is a research project sponsored by the French government; 
+The original library was written by the "Projet RNRT SAPHIR",
+which is a research project sponsored by the French government;
 project members are public and private organizations:
 
 * Cryptolog
@@ -107,9 +107,9 @@ The following is a rough list of changes and additions done by me,
 Stephan Fuhrmann:
 
 * Moved project structure to modern maven build with subprojects.
-* Moved tests to JUnit tests
-* Created JCA adapter to the digest algorithms
-* Created speed benchmark code to compare against SUN and BouncyCastle implementations
+* Moved tests to JUnit tests.
+* Created JCA adapter to the digest algorithms.
+* Created speed benchmark code to compare against SUN and BouncyCastle implementations.
 
 Maven dependencies
 ----------------
