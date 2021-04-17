@@ -115,7 +115,7 @@
         </executions>
         <!-- see bug JDK-8212233 -->
         <configuration>
-          <source>7</source>
+          <source>8</source>
         </configuration>
       </plugin>
       <plugin>
