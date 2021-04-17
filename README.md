@@ -1,11 +1,11 @@
 Saphir Hash
 ===================
-[![Circle CI Status](https://img.shields.io/circleci/build/github/sfuhrm/saphir-hash?style=plastic)](https://app.circleci.com/pipelines/github/sfuhrm/saphir-hash)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/932b4f7debba4e59907f3477db7f9cdc)](https://www.codacy.com/app/sfuhrm/saphir-hash?utm_source=github.com&utm_medium=referral&utm_content=sfuhrm/saphir-hash&utm_campaign=badger) 
-[![Coverage Status](https://coveralls.io/repos/github/sfuhrm/saphir-hash/badge.svg)](https://coveralls.io/github/sfuhrm/saphir-hash) 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core) 
-[![javadoc](https://javadoc.io/badge2/de.sfuhrm/saphir-hash-core/javadoc.svg)](https://javadoc.io/doc/de.sfuhrm/saphir-hash-core)
 
+[![Java CI](https://github.com/sfuhrm/saphir-hash/actions/workflows/maven.yml/badge.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/maven.yml)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/932b4f7debba4e59907f3477db7f9cdc)](https://www.codacy.com/app/sfuhrm/saphir-hash?utm_source=github.com&utm_medium=referral&utm_content=sfuhrm/saphir-hash&utm_campaign=badger)
+[![Coverage](https://raw.githubusercontent.com/sfuhrm/saphir-hash/master/.github/badges/jacoco.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/jacoco-badge.yml)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core)
+[![javadoc](https://javadoc.io/badge2/de.sfuhrm/saphir-hash-core/javadoc.svg)](https://javadoc.io/doc/de.sfuhrm/saphir-hash-core)
 
 Saphir Hash is a Java library for calculating cryptographic message digests.
 The library is derived from the sphlib 3.0 code that can be found here:
@@ -48,23 +48,30 @@ JH224,256,384,512
 * Whirlpool0,1
 * Whirlpool
 
-## Documentation
+Documentation
+----------------
 
 You can view the api docs online at http://api.sfuhrm.de/saphir-hash/
 The documentation can be generated with the command
 
-	mvn javadoc:aggregate
+```bash
+mvn javadoc:aggregate
+```
 
-## Building
+Building
+----------------
 
 The library is built with Apache Maven. You can build it by
 doing
 
-	mvn clean package
-	
+```bash
+mvn clean package
+```
+
 in the top library folder.
 
-## Authors
+Authors
+----------------
 
 The original library was written by the "Projet RNRT SAPHIR", 
 which is a research project sponsored by the French government; 
@@ -93,7 +100,8 @@ The additions were written by:
 
    Stephan Fuhrmann &lt;s at sfuhrm.de&gt;
 
-## List of changes
+List of changes
+----------------
 
 The following is a rough list of changes and additions done by me,
 Stephan Fuhrmann:
@@ -103,7 +111,8 @@ Stephan Fuhrmann:
 * Created JCA adapter to the digest algorithms
 * Created speed benchmark code to compare against SUN and BouncyCastle implementations
 
-## Maven dependencies
+Maven dependencies
+----------------
 
 You can use the code using the Maven repository.
 
@@ -111,9 +120,9 @@ The core classes without JCA support is in this dependency (version may change):
 
 ```xml
 <dependency>
-	<groupId>de.sfuhrm</groupId>
-	<artifactId>saphir-hash-core</artifactId>
-	<version>3.0.8</version>
+  <groupId>de.sfuhrm</groupId>
+  <artifactId>saphir-hash-core</artifactId>
+  <version>3.0.8</version>
 </dependency>
 ```
 
@@ -121,13 +130,14 @@ The JCA provider is contained in this dependency (version may change):
 
 ```xml
 <dependency>
-	<groupId>de.sfuhrm</groupId>
-	<artifactId>saphir-hash-jca</artifactId>
-	<version>3.0.8</version>
+  <groupId>de.sfuhrm</groupId>
+  <artifactId>saphir-hash-jca</artifactId>
+  <version>3.0.8</version>
 </dependency>
 ```
 
-## Example usage
+Example usage
+----------------
 
 The following short example directly instantiates
 fr.cryptohash.JCAProvider and calculates a digest over
@@ -142,7 +152,8 @@ mdSH.update("test".getBytes());
 byte mdSHDigest[] = mdSH.digest();
 ```
 
-## Performance discussion
+Performance discussion
+----------------
 
 The following image shows the performance of different algorithm implementations
 for a data size of 1M. The numbers are in nanoseconds:
@@ -150,11 +161,13 @@ for a data size of 1M. The numbers are in nanoseconds:
 ![Performance Chart](graphics/Crypto-Perf.png "Algorithm implementations for 1M of data")
 
 The implementations are:
+
 * JDK 1.8.0_121
 * Bouncy Castle 1.46
 * Saphir Hash JCA 3.0.3
 
-## License
+License
+----------------
 
 The original library is in a MIT-like license, the rest is in a BSD-like license.
 
