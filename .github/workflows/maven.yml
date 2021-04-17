@@ -23,5 +23,9 @@ jobs:
       run: mvn -B package --file pom.xml
     - uses: actions/upload-artifact@v2
       with:
-        name: plugin-jdk-${{ matrix.java }}
-        path: target/go-maven-poller-plugin.jar
+        name: core-${{ matrix.java }}
+        path: ./saphir-hash-core/target/saphir-hash-core-*.jar
+    - uses: actions/upload-artifact@v2
+      with:
+        name: jca-${{ matrix.java }}
+        path: ./saphir-hash-jca/target/saphir-hash-jca-*.jar
