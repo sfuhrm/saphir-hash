@@ -4,7 +4,7 @@
 
   <groupId>de.sfuhrm</groupId>
   <artifactId>saphir-hash-parent</artifactId>
-  <version>3.0.9</version>
+  <version>3.0.10-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Saphir Hash Parent</name>
@@ -38,7 +38,7 @@
   <scm>
     <url>https://github.com/sfuhrm/saphir-hash</url>
     <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
-    <tag>saphir-hash-parent-3.0.9</tag>
+    <tag>saphir-hash-parent-3.0.6</tag>
   </scm>
   <distributionManagement>
     <snapshotRepository>
