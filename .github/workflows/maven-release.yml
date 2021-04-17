@@ -30,28 +30,28 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: saphir-hash-core-${{ steps.version.outputs.version }}.jar
-        path: saphir-hash-core/targt/saphir-hash-core-${{ steps.version.outputs.version }}.jar
+        path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}.jar
     - uses: actions/upload-artifact@v2
       with:
         name: saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
-        path: saphir-hash-core/targt/saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
+        path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
     - uses: actions/upload-artifact@v2
       with:
         name: saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
-        path: saphir-hash-core/targt/saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
+        path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
 
     - uses: actions/upload-artifact@v2
       with:
         name: saphir-hash-jca-${{ steps.version.outputs.version }}.jar
-        path: saphir-hash-jca/targt/saphir-hash-jca-${{ steps.version.outputs.version }}.jar
+        path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}.jar
     - uses: actions/upload-artifact@v2
       with:
         name: saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
-        path: saphir-hash-jca/targt/saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
+        path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
     - uses: actions/upload-artifact@v2
       with:
         name: saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
-        path: saphir-hash-jca/targt/saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
+        path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
         
     - uses: actions/create-release@v1
       id: create_release
@@ -75,7 +75,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_name: saphir-hash-core-${{ steps.version.outputs.version }}.jar
-        asset_path: saphir-hash-core/targt/saphir-hash-core-${{ steps.version.outputs.version }}.jar
+        asset_path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}.jar
         asset_content_type: application/java-archive
     - uses: actions/upload-release-asset@v1
       env:
@@ -83,7 +83,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_name: saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
-        asset_path: saphir-hash-core/targt/saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
+        asset_path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
         asset_content_type: application/java-archive
     - uses: actions/upload-release-asset@v1
       env:
@@ -91,7 +91,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_name: saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
-        asset_path: saphir-hash-core/targt/saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
+        asset_path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
         asset_content_type: application/java-archive
 
     - uses: actions/upload-release-asset@v1
@@ -100,7 +100,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_name: saphir-hash-jca-${{ steps.version.outputs.version }}.jar
-        asset_path: saphir-hash-jca/targt/saphir-hash-jca-${{ steps.version.outputs.version }}.jar
+        asset_path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}.jar
         asset_content_type: application/java-archive
     - uses: actions/upload-release-asset@v1
       env:
@@ -108,7 +108,7 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_name: saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
-        asset_path: saphir-hash-jca/targt/saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
+        asset_path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
         asset_content_type: application/java-archive
     - uses: actions/upload-release-asset@v1
       env:
@@ -116,5 +116,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_name: saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
-        asset_path: saphir-hash-jca/targt/saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
+        asset_path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
         asset_content_type: application/java-archive
