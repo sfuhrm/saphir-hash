@@ -2,7 +2,6 @@ Saphir Hash
 ===================
 
 [![Java CI](https://github.com/sfuhrm/saphir-hash/actions/workflows/maven.yml/badge.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/maven.yml)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/932b4f7debba4e59907f3477db7f9cdc)](https://www.codacy.com/app/sfuhrm/saphir-hash?utm_source=github.com&utm_medium=referral&utm_content=sfuhrm/saphir-hash&utm_campaign=badger)
 [![Coverage](https://raw.githubusercontent.com/sfuhrm/saphir-hash/master/.github/badges/jacoco.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/jacoco-badge.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core)
 [![javadoc](https://javadoc.io/badge2/de.sfuhrm/saphir-hash-core/javadoc.svg)](https://javadoc.io/doc/de.sfuhrm/saphir-hash-core)
