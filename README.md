@@ -5,6 +5,7 @@ Saphir Hash
 [![Coverage](https://raw.githubusercontent.com/sfuhrm/saphir-hash/master/.github/badges/jacoco.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/jacoco-badge.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core)
 [![javadoc](https://javadoc.io/badge2/de.sfuhrm/saphir-hash-core/javadoc.svg)](https://javadoc.io/doc/de.sfuhrm/saphir-hash-core)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Saphir Hash is a Java library for calculating cryptographic message digests.
 The library is derived from the sphlib 3.0 code that can be found here:
