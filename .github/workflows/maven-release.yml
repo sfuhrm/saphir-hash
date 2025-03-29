@@ -27,28 +27,28 @@ jobs:
       run: echo "::set-output name=version::$(mvn org.apache.maven.plugins:maven-help-plugin:3.1.0:evaluate -Dexpression=project.version -q -DforceStdout)"
       id: version
       shell: bash
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: saphir-hash-core-${{ steps.version.outputs.version }}.jar
         path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}.jar
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
         path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}-javadoc.jar
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
         path: saphir-hash-core/target/saphir-hash-core-${{ steps.version.outputs.version }}-sources.jar
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: saphir-hash-jca-${{ steps.version.outputs.version }}.jar
         path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}.jar
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
         path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}-javadoc.jar
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar
         path: saphir-hash-jca/target/saphir-hash-jca-${{ steps.version.outputs.version }}-sources.jar

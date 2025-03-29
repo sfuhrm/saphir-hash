@@ -21,11 +21,11 @@ jobs:
         java-version: ${{ matrix.java }}
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: core-${{ matrix.java }}
         path: ./saphir-hash-core/target/saphir-hash-core-*.jar
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: jca-${{ matrix.java }}
         path: ./saphir-hash-jca/target/saphir-hash-jca-*.jar
