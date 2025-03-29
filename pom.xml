@@ -36,16 +36,10 @@
   </modules>
 
   <scm>
-    <url>https://github.com/sfuhrm/saphir-hash</url>
-    <connection>scm:git:https://github.com/sfuhrm/saphir-hash.git</connection>
-    <tag>saphir-hash-parent-3.0.6</tag>
+    <url>git@github.com:sfuhrm/saphir-hash.git</url>
+    <connection>scm:git:git@github.com:sfuhrm/saphir-hash.git</connection>
+    <tag>HEAD</tag>
   </scm>
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
