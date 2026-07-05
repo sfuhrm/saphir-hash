@@ -3,7 +3,7 @@ Saphir Hash
 
 [![Java CI](https://github.com/sfuhrm/saphir-hash/actions/workflows/maven.yml/badge.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/maven.yml)
 [![Coverage](https://raw.githubusercontent.com/sfuhrm/saphir-hash/master/.github/badges/jacoco.svg)](https://github.com/sfuhrm/saphir-hash/actions/workflows/jacoco-badge.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/saphir-hash-core)
+[![Maven Central](https://img.shields.io/maven-central/v/de.sfuhrm/saphir-hash-core.svg)](https://search.maven.org/artifact/de.sfuhrm/saphir-hash-core)
 [![javadoc](https://javadoc.io/badge2/de.sfuhrm/saphir-hash-core/javadoc.svg)](https://javadoc.io/doc/de.sfuhrm/saphir-hash-core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
